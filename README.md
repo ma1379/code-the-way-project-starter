@@ -2,7 +2,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/joeyschroeder/code-the-way-project-starter.svg)](https://github.com/joeyschroeder/code-the-way-project-starter/issues)
 [![GitHub stars](https://img.shields.io/github/stars/joeyschroeder/code-the-way-project-starter.svg)](https://github.com/joeyschroeder/code-the-way-project-starter/stargazers)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 # 🌈 code-the-way-project-starter
 
@@ -21,15 +20,14 @@ An application using [React](https://reactjs.org/) and [Redux](https://redux.js.
 - [ESLint and Prettier.io](#eslint-and-prettierio)
 - [Committing](#committing)
 
-3. [Testing](#testing)
-4. [Scripts](#scripts)
-5. [Dependencies](#dependencies)
+5. [Scripts](#scripts)
+6. [Dependencies](#dependencies)
 
 - [Development](#dependencies-development)
 - [Production](#dependencies-production)
 
-6. [Authors](#authors)
-7. [Acknowledgments](#acknowledgments)
+7. [Authors](#authors)
+8. [Acknowledgments](#acknowledgments)
 
 <a name="getting-started"></a>
 
@@ -185,18 +183,9 @@ Before allowing a successful commit Git will run the following scripts:
 ```
 npm run eslint
 npm run stylelint
-npm run test:changed
 ```
 
 It's recommended a developers run `npm run eslint:fix` often during development to prevent any failures from code-style or JavaScript syntactical errors.
-
-<a name="testing"></a>
-
-## Testing
-
-This project is equipped with [Jest](https://jestjs.io/), and [Enzyme](https://github.com/airbnb/enzyme) to assist in testing JavaScript files. Each JavaScript file in the application should be in it's own folder with a sibling `.test.js` test file. The test file should test as close to 100% of it's sibling.
-
-To check the test coverage of the application run `npm run lib:coverage`. This script will print out a code coverage report in the command line and generate an LCOV code coverage report in the project's `./coverage/` folder.
 
 <a name="scripts"></a>
 
@@ -229,18 +218,6 @@ This command runs `stylelint 'src/**/*/*.scss`. It prints styelint warnings and 
 ### `stylelint:fix`
 
 This command runs `stylelint --fix 'src/**/*/*.scss`. It attempts to fix any stylelint warnings/errors then prints the remaining warnings and errors in the command line.
-
-### `test`
-
-This command runs `jest`. It prints test successes/failures in the command line.
-
-### `test:changed`
-
-This command runs `jest -o` on the JavaScript files that have changed or are uncommitted. It prints test successes/failures in the command line.
-
-### `test:coverage`
-
-This command runs `jest --coverage`. It prints the test successes/failures in the command line and creates an .html test coverage report in `./coverage/lcov-report/index.html`.
 
 <a name="dependencies"></a>
 
