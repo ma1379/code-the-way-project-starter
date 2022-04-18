@@ -1,6 +1,4 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import 'styles/index.scss';
-
 import React, { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Outlet } from 'react-router';

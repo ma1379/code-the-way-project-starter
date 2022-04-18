@@ -9,19 +9,6 @@ export const buildStyleLoaderConfig = (production = false) => {
     },
   };
 
-  const cssModulesLoader = {
-    loader: 'css-loader',
-    options: {
-      importLoaders: 2,
-      modules: {
-        localIdentName: production
-          ? '[contenthash:base64:5]'
-          : '[name][local][contenthash:base64:5]',
-      },
-      sourceMap: false,
-    },
-  };
-
   const postCssLoader = {
     loader: 'postcss-loader',
     options: {
@@ -51,7 +38,6 @@ export const buildStyleLoaderConfig = (production = false) => {
           test: /\.scss$/,
           use: [
             production ? MiniCssExtractPlugin.loader : 'style-loader',
-            cssModulesLoader,
             postCssLoader,
             sassLoader,
           ],

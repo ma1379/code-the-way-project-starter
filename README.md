@@ -182,7 +182,6 @@ Before allowing a successful commit Git will run the following scripts:
 
 ```
 npm run eslint
-npm run stylelint
 ```
 
 It's recommended a developers run `npm run eslint:fix` often during development to prevent any failures from code-style or JavaScript syntactical errors.
@@ -210,14 +209,6 @@ This command runs `eslint --fix src/`. It attempts to fix any eslint warnings/er
 #### `start`
 
 This command runs `webpack-dev-server` in "development" mode on the documentation. Hot reloading is enabled. Once running, you can access the documentation running locally at [localhost:9090/](http://localhost:9090/).
-
-### `stylelint`
-
-This command runs `stylelint 'src/**/*/*.scss`. It prints styelint warnings and errors in the command line.
-
-### `stylelint:fix`
-
-This command runs `stylelint --fix 'src/**/*/*.scss`. It attempts to fix any stylelint warnings/errors then prints the remaining warnings and errors in the command line.
 
 <a name="dependencies"></a>
 
@@ -252,11 +243,6 @@ The following are the dependencies in `package.json` separated into the categori
 - eslint-plugin-react"
 - eslint-plugin-react-hooks
 - prettier
-
-#### Linting Styles
-
-- stylelint
-- stylelint-config-standard-scss
 
 #### Transpilation
 
