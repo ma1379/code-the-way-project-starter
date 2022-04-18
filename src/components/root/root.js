@@ -1,10 +1,10 @@
-import { Main } from 'components/main/main';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { Splash } from 'components/splash/splash';
+import { DemoForm } from 'components/demo-form/demo-form';
+import App from 'components/app/app';
 import packageJson from '../../../package.json';
 
 // The application is deployed to GitHub Pages. GitHub Pages prefixes the
@@ -19,8 +19,8 @@ export function Root(props) {
     <Provider store={store}>
       <BrowserRouter basename={basename}>
         <Routes>
-          <Route path="/" element={<Main />}>
-            <Route path={ROUTES.SPLASH} element={<Splash />} />
+          <Route path="/" element={<App />}>
+            <Route path={ROUTES.DEMO_FORM} element={<DemoForm />} />
           </Route>
         </Routes>
       </BrowserRouter>

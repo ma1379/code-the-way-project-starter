@@ -1,3 +1,3 @@
 export const ROUTES = {
-  SPLASH: '/',
+  DEMO_FORM: '/',
 };

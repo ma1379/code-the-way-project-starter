@@ -18,8 +18,8 @@ const devServerHost = 'localhost';
 const devServerPort = '9090';
 const outputDirectory = 'docs';
 const outputPublicPath = '';
-const title = 'UI Project Starter | Code The Way';
-const siteName = 'UI Project Starter';
+const title = 'Demo Form | Code The Way';
+const siteName = 'Demo Form';
 const url = 'https://github.com/joeyschroeder/code-the-way-project-starter';
 const description = 'A project to help jump-start Code The Way UI development.';
 

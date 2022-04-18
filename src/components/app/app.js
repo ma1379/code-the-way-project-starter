@@ -1,29 +1,35 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import 'styles/index.scss';
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { CssBaseline } from '@mui/material';
+import React, { useState } from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Outlet } from 'react-router';
+import AppNavigation from './app-navigation/app-navigation';
+import AppCopyright from './app-copyright/app-copyright';
+import AppBar from './app-bar/app-bar';
 
 const theme = createTheme();
 
-export function App(props) {
-  const { children } = props;
+function App() {
+  const [navigationActive, setNavigationActive] = useState(false);
+
+  const closeNavigation = () => setNavigationActive(false);
+  const openNavigation = () => setNavigationActive(true);
+
+  const siteName = 'Code The Way Demo Form';
+
   return (
     <ThemeProvider theme={theme}>
+      <AppBar title={siteName} onMenuClick={openNavigation} />
+      <AppNavigation active={navigationActive} onCloseClick={closeNavigation} />
       <CssBaseline />
-      {children}
+      <Outlet />
+      <AppCopyright
+        siteName={siteName}
+        siteLink="https://www.codetheway.org/"
+      />
     </ThemeProvider>
   );
 }
 
-App.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
-
-App.defaultProps = {
-  children: null,
-};
+export default App;
