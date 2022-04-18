@@ -7,7 +7,6 @@
       "constants/*": ["constants/*"],
       "fonts/*": ["fonts/*"],
       "store/*": ["store/*"],
-      "styles/*": ["styles/*"],
       "util/*": ["util/*"]
     },
     "target": "es6"

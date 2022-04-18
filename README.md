@@ -41,7 +41,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 #### Node.js & Node Package Manager (npm)
 
-You'll need to download and install [Node.js](https://nodejs.org) to install dependencies and run the scripts in this project to develop, test, and deploy this project.  This project requires **Node.js** version 16 or hire along with **Node Package Manager (npm)**.  npm is installed automatically when Node.js is installed.  Download the latest version of Node.js [here](https://nodejs.org/en/download/) and install.
+You'll need to download and install [Node.js](https://nodejs.org) to install dependencies and run the scripts in this project to develop, test, and deploy this project. This project requires **Node.js** version 16 or hire along with **Node Package Manager (npm)**. npm is installed automatically when Node.js is installed. Download the latest version of Node.js [here](https://nodejs.org/en/download/) and install.
 
 <a name="installation"></a>
 
@@ -74,7 +74,7 @@ Finally, run `npm install` to install all project dependencies:
 npm install
 ```
 
-**NOTE:** *Occaisionally, depending on your user permissions, you may need to **force** npm to install dependencies.  If errors occur while running `npm install`, you can do this by running `npm install --force` instead.*
+**NOTE:** _Occaisionally, depending on your user permissions, you may need to **force** npm to install dependencies. If errors occur while running `npm install`, you can do this by running `npm install --force` instead._
 
 <a name="development"></a>
 
