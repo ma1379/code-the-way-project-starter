@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { DemoForm } from 'components/demo-form/demo-form';
+import DemoForm from 'components/demo-form/demo-form';
 import App from 'components/app/app';
 import packageJson from '../../../package.json';
 

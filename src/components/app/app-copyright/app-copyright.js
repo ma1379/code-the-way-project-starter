@@ -12,7 +12,12 @@ export default function AppCopyright(props) {
   const siteLinkExists = Boolean(siteLink);
 
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      sx={{ mt: 2 }}
+    >
       {'Copyright © '}
       {siteLinkExists ? (
         <Link color="inherit" href={siteLink} target="_blank">
