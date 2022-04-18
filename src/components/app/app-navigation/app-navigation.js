@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 
-function AppNavigation(props) {
+export default function AppNavigation(props) {
   const { active, onCloseClick } = props;
 
   return (
@@ -30,5 +30,3 @@ AppNavigation.defaultProps = {
   active: false,
   onCloseClick: undefined,
 };
-
-export default AppNavigation;

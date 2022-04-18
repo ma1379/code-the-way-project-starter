@@ -8,7 +8,7 @@ import AppBar from './app-bar/app-bar';
 
 const theme = createTheme();
 
-function App() {
+export default function App() {
   const [navigationActive, setNavigationActive] = useState(false);
 
   const closeNavigation = () => setNavigationActive(false);
@@ -29,5 +29,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;

@@ -8,7 +8,7 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function AppBar(props) {
+export default function AppBar(props) {
   const { onMenuClick, title } = props;
 
   return (
@@ -38,5 +38,3 @@ AppBar.defaultProps = {
   onMenuClick: undefined,
   title: '',
 };
-
-export default AppBar;

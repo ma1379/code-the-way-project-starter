@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-function AppCopyright(props) {
+export default function AppCopyright(props) {
   const { siteName, siteLink } = props;
 
   if (!siteName) return null;
@@ -35,5 +35,3 @@ AppCopyright.defaultProps = {
   siteName: undefined,
   siteLink: undefined,
 };
-
-export default AppCopyright;

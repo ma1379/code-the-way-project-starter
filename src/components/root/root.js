@@ -12,7 +12,7 @@ import packageJson from '../../../package.json';
 // use is as the basename for the router when in 'production' mode'
 const basename = process.env.BABEL_ENV === 'production' ? packageJson.name : '';
 
-export function Root(props) {
+export default function Root(props) {
   const { store } = props;
 
   return (
