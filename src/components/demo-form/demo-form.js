@@ -1,16 +1,17 @@
-import {
-  Avatar,
-  Button,
-  Checkbox,
-  Container,
-  FormControlLabel,
-  Grid,
-  TextField,
-  Typography,
-} from '@mui/material';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Checkbox from '@mui/material/Checkbox';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import React from 'react';
+import DemoFormFirstNameTextFieldConnected from './demo-form-first-name-text-field/demo-form-first-name-text-field.connected';
+import DemoFormLastNameTextFieldConnected from './demo-form-last-name-text-field/demo-form-last-name-text-field.connected';
+import DemoFormEmailAddressTextFieldConnected from './demo-form-email-address-text-field/demo-form-email-address-text-field.connected';
+import DemoFormPasswordTextFieldConnected from './demo-form-password-text-field/demo-form-password-text-field.connected';
 
 export default function DemoForm() {
   return (
@@ -31,32 +32,16 @@ export default function DemoForm() {
         <Box sx={{ mt: 3 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-              <TextField
-                fullWidth
-                label="First Name"
-                name="firstName"
-                required
-              />
+              <DemoFormFirstNameTextFieldConnected />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField required fullWidth label="Last Name" name="lastName" />
+              <DemoFormLastNameTextFieldConnected />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Email Address"
-                name="email"
-                required
-              />
+              <DemoFormEmailAddressTextFieldConnected />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Password"
-                name="password"
-                required
-                type="password"
-              />
+              <DemoFormPasswordTextFieldConnected />
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
