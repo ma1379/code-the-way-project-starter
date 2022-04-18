@@ -1,25 +1,24 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import { configureStore } from 'util/configure-store/configure-store';
-import { render } from 'react-dom';
-import Root from './components/root/root';
+import { render as ReactDOMRender } from 'react-dom';
+import { Root } from './components/root/root';
 
 const store = configureStore();
 
-const init = (Component) =>
-  render(
+const render = (Component) =>
+  ReactDOMRender(
     <AppContainer>
       <Component store={store} />
     </AppContainer>,
     document.getElementById('app')
   );
 
-init(Root);
+render(Root);
 
 if (module.hot) {
   module.hot.accept('./components/root/root', () => {
     // eslint-disable-next-line global-require
-    const nextRoot = require('./components/root/root').Root;
-    init(nextRoot);
+    render(require('./components/root/root').Root);
   });
 }

@@ -5,6 +5,7 @@ import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import DemoForm from 'components/demo-form/demo-form';
 import App from 'components/app/app';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import packageJson from '../../../package.json';
 
 // The application is deployed to GitHub Pages. GitHub Pages prefixes the
@@ -12,18 +13,22 @@ import packageJson from '../../../package.json';
 // use is as the basename for the router when in 'production' mode'
 const basename = process.env.BABEL_ENV === 'production' ? packageJson.name : '';
 
-export default function Root(props) {
+const theme = createTheme();
+
+export function Root(props) {
   const { store } = props;
 
   return (
     <Provider store={store}>
-      <BrowserRouter basename={basename}>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route path={ROUTES.DEMO_FORM} element={<DemoForm />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter basename={basename}>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route path={ROUTES.DEMO_FORM} element={<DemoForm />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </Provider>
   );
 }
