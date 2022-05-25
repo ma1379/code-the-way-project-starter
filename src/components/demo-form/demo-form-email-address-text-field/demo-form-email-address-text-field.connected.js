@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   selectDemoFormEmailAddress,
   updateDemoFormEmailAddress,
-} from 'store/demo-form/demo-form';
+} from '../../../store/demo-form/demo-form';
 
 function mapStateToProps(state) {
   return {

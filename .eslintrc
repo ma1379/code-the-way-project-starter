@@ -1,7 +1,6 @@
 {
   "env": {
-    "browser": true,
-    "jest/globals": true
+    "browser": true
   },
   "extends": [
     "airbnb",
@@ -10,7 +9,7 @@
     "plugin:react/recommended"
   ],
   "parser": "@babel/eslint-parser",
-  "plugins": ["jest", "react", "react-hooks"],
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "comma-dangle": 0,
     "consistent-return": 0,
@@ -18,9 +17,6 @@
       "error",
       {
         "devDependencies": [
-          "**/*.test.js",
-          "./stylelint.config.js",
-          "./test-setup.js",
           "./webpack.config.babel.js",
           "./webpack/**/*.js"
         ]
@@ -44,19 +40,5 @@
     "react/no-unused-prop-types": 1,
     "react/static-property-placement": [2, "static public field"],
     "semi": ["error", "always"]
-  },
-  "settings": {
-    "import/resolver": {
-      "babel-module": {
-        "alias": {
-          "components": "./src/components",
-          "constants": "./src/constants",
-          "fonts": "./src/fonts",
-          "store": "./src/store",
-          "styles": "./src/styles",
-          "util": "./src/util"
-        }
-      }
-    }
   }
 }

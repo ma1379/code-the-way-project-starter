@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
-import { ROUTES } from 'constants/routes';
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import DemoForm from 'components/demo-form/demo-form';
-import App from 'components/app/app';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ROUTES } from '../../constants/routes';
+import DemoForm from '../demo-form/demo-form';
+import App from '../app/app';
 import packageJson from '../../../package.json';
 
 // The application is deployed to GitHub Pages. GitHub Pages prefixes the

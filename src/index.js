@@ -1,7 +1,7 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
-import { configureStore } from 'util/configure-store/configure-store';
 import { render as ReactDOMRender } from 'react-dom';
+import { configureStore } from './util/configure-store/configure-store';
 import { Root } from './components/root/root';
 
 const store = configureStore();
