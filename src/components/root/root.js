@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-import { Provider } from 'react-redux';
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -15,28 +13,16 @@ const basename = process.env.BABEL_ENV === 'production' ? packageJson.name : '';
 
 const theme = createTheme();
 
-export function Root(props) {
-  const { store } = props;
-
+export function Root() {
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter basename={basename}>
-          <Routes>
-            <Route path="/" element={<App />}>
-              <Route path={ROUTES.DEMO_FORM} element={<DemoForm />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter basename={basename}>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path={ROUTES.DEMO_FORM} element={<DemoForm />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
-
-Root.propTypes = {
-  store: PropTypes.object,
-};
-
-Root.defaultProps = {
-  store: null,
-};

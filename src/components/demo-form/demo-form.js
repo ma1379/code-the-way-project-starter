@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import TextField from '@mui/material/TextField';
 import React from 'react';
-import DemoFormFirstNameTextFieldConnected from './demo-form-first-name-text-field/demo-form-first-name-text-field.connected';
-import DemoFormLastNameTextFieldConnected from './demo-form-last-name-text-field/demo-form-last-name-text-field.connected';
-import DemoFormEmailAddressTextFieldConnected from './demo-form-email-address-text-field/demo-form-email-address-text-field.connected';
-import DemoFormPasswordTextFieldConnected from './demo-form-password-text-field/demo-form-password-text-field.connected';
 
 export default function DemoForm() {
   return (
@@ -32,16 +29,21 @@ export default function DemoForm() {
         <Box sx={{ mt: 3 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-              <DemoFormFirstNameTextFieldConnected />
+              <TextField
+                fullWidth
+                label="Email Address"
+                required
+                type="email"
+              />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <DemoFormLastNameTextFieldConnected />
+              <TextField fullWidth label="First Name" required />
             </Grid>
             <Grid item xs={12}>
-              <DemoFormEmailAddressTextFieldConnected />
+              <TextField fullWidth label="Last Name" required />
             </Grid>
             <Grid item xs={12}>
-              <DemoFormPasswordTextFieldConnected />
+              <TextField type="password" required label="Password" fullWidth />
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
