@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ROUTES } from '../../constants/routes';
-import DemoForm from '../demo-form/demo-form';
+import SignUp from '../sign-up/sign-up';
 import App from '../app/app';
 import packageJson from '../../../package.json';
 
@@ -19,7 +19,7 @@ export function Root() {
       <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path={ROUTES.DEMO_FORM} element={<DemoForm />} />
+            <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
           </Route>
         </Routes>
       </BrowserRouter>

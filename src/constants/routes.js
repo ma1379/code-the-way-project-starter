@@ -1,3 +1,3 @@
 export const ROUTES = {
-  DEMO_FORM: '/',
+  SIGN_UP: '/',
 };
