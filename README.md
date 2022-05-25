@@ -9,25 +9,20 @@ An application using [React](https://reactjs.org/) and [Redux](https://redux.js.
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
+- [Getting Started](#getting-started)
 
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 
-2. [Development](#development)
+- [Development](#development)
 
-- [Webpack Dev Server](#webpack-dev-server)
-- [ESLint and Prettier.io](#eslint-and-prettierio)
-- [Committing](#committing)
+  - [Webpack Dev Server](#webpack-dev-server)
+  - [ESLint and Prettier.io](#eslint-and-prettierio)
+  - [Committing](#committing)
 
-5. [Scripts](#scripts)
-6. [Dependencies](#dependencies)
-
-- [Development](#dependencies-development)
-- [Production](#dependencies-production)
-
-7. [Authors](#authors)
-8. [Acknowledgments](#acknowledgments)
+- [Scripts](#scripts)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
 
 <a name="getting-started"></a>
 
@@ -194,10 +189,6 @@ It's recommended a developers run `npm run eslint:fix` often during development 
 
 This command runs `webpack` in "production" mode. It uses the `src/index.js` file as it's entry point, and generates a JavaScript `main.js` and `vendor.js` file in `dist/`.
 
-### `clean`
-
-This command delets the `dist/` directory.
-
 ### `eslint`
 
 This command runs `eslint src/`. It prints eslint warnings and errors in the command line.
@@ -209,107 +200,6 @@ This command runs `eslint --fix src/`. It attempts to fix any eslint warnings/er
 #### `start`
 
 This command runs `webpack-dev-server` in "development" mode on the documentation. Hot reloading is enabled. Once running, you can access the documentation running locally at [localhost:9090/](http://localhost:9090/).
-
-<a name="dependencies"></a>
-
-## Dependencies
-
-The following are the dependencies in `package.json` separated into the categories in which the dependencies are required.
-
-<a name="dependencies-development"></a>
-
-### Development
-
-- @hot-loader/react-dom
-- webpack
-- webpack-cli
-- webpack-dev-server
-
-#### Git
-
-- pre-commit
-
-#### Linting JavaScript
-
-- @babel/eslint-parser
-- eslint
-- eslint-config-airbnb
-- eslint-config-prettier
-- eslint-import-resolver-babel-module
-- eslint-plugin-import
-- eslint-plugin-jest
-- eslint-plugin-jsx-a11y
-- eslint-plugin-prettier
-- eslint-plugin-react"
-- eslint-plugin-react-hooks
-- prettier
-
-#### Transpilation
-
-- @babel/core
-- @babel/preset-env
-- @babel/preset-react
-- babel-plugin-lodash
-- babel-plugin-module-resolver
-
-#### Webpack
-
-- buffer
-- clean-webpack-plugin
-- compression-webpack-plugin
-- path
-- process
-- webpack-merge
-
-##### JavaScript
-
-- @babel/register
-- babel-loader
-- terser-webpack-plugin
-
-##### Styles
-
-- autoprefixer
-- css-loader
-- css-minimizer-webpack-plugin
-- mini-css-extract-plugin
-- postcss
-- postcss-loader
-- postcss-scss
-- sass
-- sass-loader
-- style-loader
-
-##### Templates
-
-- favicons
-- favicons-webpack-plugin
-- html-webpack-plugin
-
-<a name="dependencies-production"></a>
-
-### Production
-
-#### JavaScript
-
-- classnames
-- lodash
-- prop-types
-- react
-- react-dom
-- react-hot-loader
-- react-redux
-- react-router
-- react-router-dom
-- redux
-- redux-actions
-- redux-thunk
-
-#### Styles
-
-- animate.css
-- font-awesome
-- normalize.css
 
 <a name="authors"></a>
 

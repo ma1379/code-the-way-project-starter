@@ -1,5 +1,6 @@
 import path from 'path';
 import { WatchIgnorePlugin } from 'webpack';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export const buildDevServerConfig = ({
   baseDirectory,
@@ -11,7 +12,9 @@ export const buildDevServerConfig = ({
     devServer: {
       client: {
         overlay: true,
-        progress: true,
+      },
+      devMiddleware: {
+        stats: 'errors-only',
       },
       historyApiFallback: true,
       host,
@@ -21,14 +24,10 @@ export const buildDevServerConfig = ({
       proxy,
     },
     plugins: [
+      new ReactRefreshWebpackPlugin(),
       new WatchIgnorePlugin({
         paths: [path.join(baseDirectory, 'node_modules')],
       }),
     ],
-    resolve: {
-      alias: {
-        'react-dom': '@hot-loader/react-dom',
-      },
-    },
   };
 };

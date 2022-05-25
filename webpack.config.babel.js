@@ -1,6 +1,5 @@
 import merge from 'webpack-merge';
 import path from 'path';
-import { COMPRESS_ASSETS_CONFIG } from './webpack/configs/compress-assets-config';
 import { DEVTOOL_CONFIG } from './webpack/configs/devtool-config';
 import { JAVASCRIPT_LOADER_CONFIG } from './webpack/configs/javascript-loader-config';
 import { OPTIMIZATION_CONFIG } from './webpack/configs/optimization-config';
@@ -35,7 +34,7 @@ const templatePath = path.join(
   'src/templates/main.ejs'
 );
 
-const OUTPUT_PATH = path.resolve(__dirname, outputDirectory);
+const OUTPUT_PATH = path.join(path.resolve(__dirname, outputDirectory), '/');
 const ENTRY_CONFIG = { entry: path.resolve(__dirname, entryPoint) };
 
 const OUTPUT_CONFIG = {
@@ -71,7 +70,6 @@ const DEVELOPMENT_CONFIG = merge([
 
 const PRODUCTION_CONFIG = merge([
   COMMON_CONFIG,
-  COMPRESS_ASSETS_CONFIG,
   OPTIMIZATION_CONFIG,
   OUTPUT_CONFIG,
   STATS_CONFIG,
