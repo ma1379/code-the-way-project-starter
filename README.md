@@ -20,6 +20,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [ESLint and Prettier.io](#eslint-and-prettierio)
   - [Committing](#committing)
 
+- [Material UI](#material-ui)
+
 - [Available Scripts](#available-scripts)
 
   - [npm start](#npm-start)
@@ -130,9 +132,38 @@ This project is equipped with [ESLint](https://eslint.org/) and [Prettier.io](ht
 
 During development, you can run `npm run eslint:fix` in the root of the project to automatically fix any fixable [ESLint errors/warnings](.eslintrc), and format your JavaScript [Prettier standards](https://prettier.io/).
 
-#### Fix ESLint and Prettier errors/warnings on Save
+#### Fix ESLint and Prettier errors on save
 
-⚠️ This documentation is under construction. ⚠️
+To make development simpler, keep development styles homogenous amongst multiple developers, and prevent unwanted JavaScript errors, ESLint has created a [VSCode plugin](https://marketplace.visualstudio.com/VSCode) to highlight and fix errors every time a JavaScript file is saved. To untilize this feature, first you'll need to install the ESLint VSCode extension, then update your VSCode settings to fix errors on save.
+
+First, install [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) to VSCode:
+
+1. Open the _Extension_ tab on the left-hand side menu of VSCode, this will open a side panel of extensions.
+2. Use the search field at the top of the side panel to search for _"ESLint"_, this will list multiple results.
+3. The first result should be [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), click the small _Install_ button on the bottom, right-hand side of the result to install the plugin.
+
+Now, the plugin is running in VSCode. To automatically have VSCode fix all ESLint errors/warnings when a JavaScript file is saved, update your VSCode settings.
+
+Inside of VSCode, navigate to:
+_File > Preferences > Settings > Extensions_
+
+Then scroll down, and click _"Edit in settings.json"_.
+
+Include the following code in your `settings.json` file:
+
+```
+// settings.json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
+```
+
+This file can be accessed in the following locations:
+
+- Windows: `%APPDATA%\Code\User\settings.json`
+- macOS `$HOME/Library/Application Support/Code/User/settings.json`
 
 <a name="committing"></a>
 
@@ -194,6 +225,14 @@ npm run eslint
 ```
 
 It's recommended a developers run `npm run eslint:fix` often during development to prevent any failures from code-style or JavaScript syntactical errors.
+
+<a name="#material-ui"></a>
+
+## Material UI
+
+This application is outfitted with [Material UI (MUI)](https://mui.com/) to simplify design. MUI offers a comprehensive suite of UI tools to help you develop new features faster.
+
+You can learn more about using MUI here: [https://mui.com/material-ui/getting-started/usage/](https://mui.com/material-ui/getting-started/usage/).
 
 <a name="available-scripts"></a>
 
