@@ -5,7 +5,7 @@
 
 # 🌈 code-the-way-project-starter
 
-An application using [React](https://reactjs.org/) and [Redux](https://redux.js.org/) designed to be used as a starting point for front-end applications.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Table of Contents
 
@@ -16,11 +16,18 @@ An application using [React](https://reactjs.org/) and [Redux](https://redux.js.
 
 - [Development](#development)
 
-  - [Webpack Dev Server](#webpack-dev-server)
+  - [Running the Application Locally](#running-application-locally)
   - [ESLint and Prettier.io](#eslint-and-prettierio)
   - [Committing](#committing)
 
-- [Scripts](#scripts)
+- [Available Scripts](#available-scripts)
+
+  - [npm start](#npm-start)
+  - [npm run build](#npm-run-build)
+  - [npm run eslint](#npm-run-eslint)
+  - [npm run eslint:fix](#npm-run-eslint-fix)
+
+- [Learn More](#learn-more)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
@@ -75,11 +82,11 @@ npm install
 
 ## Development
 
-<a name="webpack-dev-server"></a>
+<a name="running-application-locally"></a>
 
-### Webpack Dev Server
+### Running the Application Locally
 
-During development, this application will run inside a local web browser using [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/). To start the application in a web browser, navigate to the root of the project directory in the command line and run `npm run start`. This command will print out a URL which can be opened in a web browser.
+During development, this application will run inside a local web browser. To start the application in a web browser, navigate to the root of the project directory in the command line and run `npm run start`. This command will start the application and automatically open the application in a browser window.
 
 First, navigate to the root of the project:
 
@@ -93,20 +100,27 @@ Then start the application:
 npm run start
 ```
 
-After Webpack Dev Server has compiled the development bundle, it will print out something similar to following:
+After Webpack has compiled the development bundle, it will print out something similar to following:
 
 ```
-<i> [webpack-dev-server] Project is running at:
-<i> [webpack-dev-server] Loopback: http://localhost:9090/, http://127.0.0.1:9090/
-<i> [webpack-dev-server] Content not from webpack is served from '/Users/joey/Documents/workspace/code-the-way-project-starter/public' directory
-<i> [webpack-dev-server] 404s will fallback to '/index.html'
+Compiled successfully!
+
+You can now view code-the-way-project-starter in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.9:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
 ```
 
-Open the URL [http://localhost:9090/](http://localhost:9090/) in your web browser.
+If the application does not automatically open, you can open the URL [http://localhost:3000](http://localhost:3000) in your web browser.
 
 #### Hot Reloading
 
-This project is equipped with [Webpack Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/). This means that while Webpack Dev Server is running the documentation application, you can make changes to the files and they will automatically update in the web browser. **Occasionally, the web browser may need a manual refresh if you're changes affect application state or changes outside of the React life-cycle.**
+This project is equipped with [Webpack Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/). This means that while the application is running locally, you can make changes and save files, and they will automatically update in the web browser. **Occasionally, the web browser may need a manual refresh if you're changes affect application state or changes outside of the React life-cycle.**
 
 <a name="eslint-and-prettierio"></a>
 
@@ -181,25 +195,75 @@ npm run eslint
 
 It's recommended a developers run `npm run eslint:fix` often during development to prevent any failures from code-style or JavaScript syntactical errors.
 
-<a name="scripts"></a>
+<a name="available-scripts"></a>
 
-## Scripts
+## Available Scripts
 
-### `build`
+In the project directory, you can run:
 
-This command runs `webpack` in "production" mode. It uses the `src/index.js` file as it's entry point, and generates a JavaScript `main.js` and `vendor.js` file in `dist/`.
+<a name="npm-start"></a>
 
-### `eslint`
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+<a name="npm-run-build"></a>
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+<a name="npm-run-eslint"></a>
+
+### `npm run eslint`
 
 This command runs `eslint src/`. It prints eslint warnings and errors in the command line.
 
-### `eslint:fix`
+<a name="npm-run-eslint-fix"></a>
+
+### `npm eslint:fix`
 
 This command runs `eslint --fix src/`. It attempts to fix any eslint warnings/errors then prints the remaining warnings and errors in the command line.
 
-#### `start`
+## Learn More
 
-This command runs `webpack-dev-server` in "development" mode on the documentation. Hot reloading is enabled. Once running, you can access the documentation running locally at [localhost:9090/](http://localhost:9090/).
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 <a name="authors"></a>
 
