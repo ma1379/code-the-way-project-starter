@@ -3,12 +3,6 @@
   "version": "0.1.0",
   "description": "A project to help jump-start Code The Way UI development.",
   "private": true,
-  "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -16,10 +10,57 @@
     "eslint:fix": "./node_modules/.bin/eslint --fix src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" ESLint JavaScript errors fixed"
   },
   "author": "Joey Schroeder <schrjos@gmail.com>",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  },
   "eslintConfig": {
     "extends": [
+      "airbnb",
+      "eslint:recommended",
+      "plugin:prettier/recommended",
       "react-app"
-    ]
+    ],
+    "rules": {
+      "comma-dangle": 0,
+      "consistent-return": 0,
+      "prettier/prettier": 1,
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "react/forbid-prop-types": [
+        2,
+        {
+          "forbid": [
+            "any"
+          ]
+        }
+      ],
+      "react/jsx-filename-extension": [
+        0
+      ],
+      "react/jsx-indent": 0,
+      "react/jsx-indent-props": 0,
+      "react/jsx-one-expression-per-line": [
+        0
+      ],
+      "react/no-unused-prop-types": 1,
+      "react/react-in-jsx-scope": 0,
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
   },
   "browserslist": {
     "production": [
