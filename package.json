@@ -1,75 +1,36 @@
 {
   "name": "code-the-way-project-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A project to help jump-start Code The Way UI development.",
-  "main": "index.js",
-  "scripts": {
-    "build": "./node_modules/.bin/webpack --env production",
-    "eslint": "./node_modules/.bin/eslint src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" No JavaScript ESLint errors to fix",
-    "eslint:fix": "./node_modules/.bin/eslint --fix src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" ESLint JavaScript errors fixed",
-    "start": "./node_modules/.bin/webpack serve --env development"
+  "private": true,
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joeyschroeder/code-the-way-project-starter.git"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eslint": "./node_modules/.bin/eslint src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" No JavaScript ESLint errors to fix",
+    "eslint:fix": "./node_modules/.bin/eslint --fix src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" ESLint JavaScript errors fixed"
   },
   "author": "Joey Schroeder <schrjos@gmail.com>",
-  "license": "ISC",
-  "pre-commit": {
-    "run": [
-      "eslint"
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "silent": true
-  },
-  "bugs": {
-    "url": "https://github.com/joeyschroeder/code-the-way-project-starter/issues"
-  },
-  "homepage": "https://github.com/joeyschroeder/code-the-way-project-starter#readme",
-  "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/eslint-parser": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-react": "^7.17.12",
-    "@babel/register": "^7.17.7",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-    "autoprefixer": "^10.4.7",
-    "babel-loader": "^8.2.5",
-    "buffer": "6.0.3",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.7.1",
-    "eslint": "^8.16.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "favicons": "^6.2.2",
-    "favicons-webpack-plugin": "^5.0.2",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.0",
-    "path": "^0.12.7",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.6.2",
-    "process": "0.11.10",
-    "react-refresh": "^0.13.0",
-    "sass": "^1.52.1",
-    "sass-loader": "^13.0.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0",
-    "webpack-merge": "^5.8.0"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.8.0",
-    "@mui/material": "^5.8.1",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
