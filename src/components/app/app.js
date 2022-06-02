@@ -12,7 +12,7 @@ export default function App() {
   const closeNavigation = () => setNavigationActive(false);
   const openNavigation = () => setNavigationActive(true);
 
-  const siteName = 'Code The Way Demo Form';
+  const siteName = 'Code The Way';
 
   return (
     <>
