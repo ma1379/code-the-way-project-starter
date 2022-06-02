@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Outlet } from 'react-router';
+import { Outlet } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import AppNavigation from './app-navigation/app-navigation';
 import AppCopyright from './app-copyright/app-copyright';
