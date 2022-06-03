@@ -2,7 +2,7 @@ import Avatar from '@mui/material/Avatar';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import { useState } from 'react';
 import SignUpForm from './sign-up-form/sign-up-form';
 
@@ -27,11 +27,9 @@ export default function SignUp() {
         }}
       >
         <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          <LockOutlinedIcon />
+          <SupervisedUserCircleIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign up
-        </Typography>
+        <Typography variant="h5">Sign up</Typography>
         <SignUpForm
           emailAddress={emailAddress}
           firstName={firstName}
