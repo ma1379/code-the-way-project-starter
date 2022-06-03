@@ -2,7 +2,6 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import AddStudent from './student-forms/add-student';
 import StudentsList from './students-list';
 import UpdateStudent from './student-forms/update-student';
@@ -11,10 +10,8 @@ import {
   addStudent,
   updateStudent,
 } from '../../services/services';
-import ROUTES from '../../constants/routes';
 
 export default function Students() {
-  const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [birthDate, setBirthDate] = useState('');
@@ -69,8 +66,8 @@ export default function Students() {
     refreshStudents();
   };
 
-  const onUpdateStudent = (studentId) => {
-    if (updateStudentModal == true) {
+  const updateModalChange = (studentId) => {
+    if (updateStudentModal === true) {
       setUpdateStudentModal(false);
     } else {
       const studentIndex = students.findIndex(
@@ -81,7 +78,27 @@ export default function Students() {
     }
   };
 
-  const updateStudentHandler = async (studentId) => {};
+  const updateStudentHandler = async (
+    studentId,
+    newFirstName,
+    newLastName,
+    newBirthDate,
+    newCellPhone,
+    newEmailAddress
+  ) => {
+    const updatedStudent = {
+      id: studentId,
+      studentFirstName: newFirstName,
+      studentLastName: newLastName,
+      studentDateOfBirth: newBirthDate,
+      studentCellPhone: newCellPhone,
+      studentEmail: newEmailAddress,
+      active: true,
+    };
+    await updateStudent(updatedStudent);
+    refreshStudents();
+    updateModalChange();
+  };
 
   return (
     <Container maxWidth="sm">
@@ -89,7 +106,7 @@ export default function Students() {
         <UpdateStudent
           student={studentToUpdate}
           onSubmit={updateStudentHandler}
-          handleClose={onUpdateStudent}
+          handleClose={updateModalChange}
         />
       )}
       <Box
@@ -126,7 +143,7 @@ export default function Students() {
         <StudentsList
           students={activeStudents}
           archiveStudentHandler={archiveStudentHandler}
-          updateStudentHandler={onUpdateStudent}
+          updateStudentHandler={updateModalChange}
         />
       </Box>
     </Container>

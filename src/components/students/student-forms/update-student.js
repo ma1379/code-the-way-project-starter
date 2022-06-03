@@ -3,8 +3,9 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
-import { Modal, Typography } from '@mui/material';
+import { Modal } from '@mui/material';
 import { useState, useEffect } from 'react';
+import { style } from '@mui/system';
 
 export default function UpdateStudent(props) {
   const { student, onSubmit, handleClose } = props;
@@ -17,9 +18,9 @@ export default function UpdateStudent(props) {
 
   useEffect(() => {
     initializeForm();
-  });
+  }, []);
 
-  function initializeForm() {
+  const initializeForm = () => {
     if (student.studentFirstName != null) {
       setFirstName(student.studentFirstName);
     }
@@ -36,11 +37,18 @@ export default function UpdateStudent(props) {
     if (student.studentEmail != null) {
       setEmailAddress(student.studentEmail);
     }
-  }
+  };
 
   const updateStudentHandler = (event) => {
     event.preventDefault();
-    onSubmit(firstName, lastName, birthDate, cellPhone, emailAddress);
+    onSubmit(
+      student.id,
+      firstName,
+      lastName,
+      birthDate,
+      cellPhone,
+      emailAddress
+    );
   };
 
   const firstNameChangeHandler = (event) => {
@@ -66,7 +74,7 @@ export default function UpdateStudent(props) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={{ mt: 3 }}>
+      <Box sx={style}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
