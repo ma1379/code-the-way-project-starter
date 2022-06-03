@@ -4,7 +4,11 @@ import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
 import AddStudent from './student-forms/add-student';
 import StudentsList from './students-list';
-import { getStudents, addStudent } from '../../services/services';
+import {
+  getStudents,
+  addStudent,
+  updateStudent,
+} from '../../services/services';
 
 export default function Students() {
   const [firstName, setFirstName] = useState('');
@@ -20,26 +24,6 @@ export default function Students() {
   }, []);
 
   const refreshStudents = async () => {
-    // const studentsList = [
-    //   {
-    //     id: 1,
-    //     StudentFirstName: 'firstName1',
-    //     StudentLastName: 'lastName1',
-    //     StudentDateOfBirth: 'birthDate1',
-    //     StudentCellPhone: 'phone1',
-    //     StudentEmail: 'email1',
-    //     Active: true,
-    //   },
-    //   {
-    //     id: 2,
-    //     StudentFirstName: 'firstName2',
-    //     StudentLastName: 'lastName2',
-    //     StudentDateOfBirth: 'birthDate2',
-    //     StudentCellPhone: 'phone2',
-    //     StudentEmail: 'email2',
-    //     Active: true,
-    //   },
-    // ];
     const response = await getStudents();
     setStudents(response);
     setActiveStudents(response.filter((student) => student.active === true));
@@ -68,6 +52,15 @@ export default function Students() {
     setBirthDate('');
     setCellPhone('');
     setEmailAddress('');
+  };
+
+  const archiveStudentHandler = async (studentId) => {
+    const updatedStudent = {
+      id: studentId,
+      Active: false,
+    };
+    await updateStudent(updatedStudent);
+    refreshStudents();
   };
 
   return (
@@ -103,7 +96,10 @@ export default function Students() {
           alignItems: 'center',
         }}
       >
-        <StudentsList students={activeStudents} />
+        <StudentsList
+          students={activeStudents}
+          archiveStudentHandler={archiveStudentHandler}
+        />
       </Box>
     </Container>
   );

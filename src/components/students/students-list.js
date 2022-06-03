@@ -5,7 +5,11 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
 export default function StudentsList(props) {
-  const { students } = props;
+  const { students, archiveStudentHandler } = props;
+
+  const archiveStudent = (event) => {
+    archiveStudentHandler(event.target.value);
+  };
 
   return (
     <Box sx={{ mt: 3 }}>
@@ -17,13 +21,15 @@ export default function StudentsList(props) {
               {student.studentLastName}, {student.studentFirstName}
             </Typography>
             <Typography component="p">
-              Date of Birth: {student.studentDateOfBirth}
+              Date of Birth: {student.studentDateOfBirth.substring(0, 10)}
             </Typography>
             <Typography component="p">Email: {student.studentEmail}</Typography>
             <Typography component="p">
               Phone Number: {student.studentCellPhone}
             </Typography>
-            <Button value={student.id}>Delete</Button>
+            <Button value={student.id} onClick={archiveStudent}>
+              Delete
+            </Button>
             <Button value={student.id}>Update</Button>
           </Grid>
         ))}
@@ -34,4 +40,5 @@ export default function StudentsList(props) {
 
 StudentsList.propTypes = {
   students: PropTypes.array.isRequired,
+  archiveStudentHandler: PropTypes.func.isRequired,
 };
