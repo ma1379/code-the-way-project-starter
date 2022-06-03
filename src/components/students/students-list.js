@@ -7,12 +7,13 @@ import Typography from '@mui/material/Typography';
 export default function StudentsList(props) {
   const { students } = props;
 
-  const activeStudents = students.filter((student) => student.Active === true);
+  // eslint-disable-next-line no-console
+  console.log(students);
 
   return (
     <Box sx={{ mt: 3 }}>
       <Grid container spacing={2}>
-        {activeStudents.map((student) => (
+        {students.map((student) => (
           <Grid item xs={12} key={student.id}>
             <Typography component="body">{student.id}</Typography>
             <Typography component="body">

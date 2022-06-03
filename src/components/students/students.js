@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
 import AddStudent from './student-forms/add-student';
 import StudentsList from './students-list';
+import { getStudents, addStudent } from '../../services/services';
 
 export default function Students() {
   const [firstName, setFirstName] = useState('');
@@ -12,56 +13,67 @@ export default function Students() {
   const [cellPhone, setCellPhone] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [students, setStudents] = useState([]);
+  const [activeStudents, setActiveStudents] = useState([]);
 
   useEffect(() => {
     refreshStudents();
   }, []);
 
   const refreshStudents = async () => {
-    const studentsList = [
-      {
-        id: 1,
-        StudentFirstName: 'firstName1',
-        StudentLastName: 'lastName1',
-        StudentDateOfBirth: 'birthDate1',
-        StudentCellPhone: 'phone1',
-        StudentEmail: 'email1',
-        Active: true,
-      },
-      {
-        id: 2,
-        StudentFirstName: 'firstName2',
-        StudentLastName: 'lastName2',
-        StudentDateOfBirth: 'birthDate2',
-        StudentCellPhone: 'phone2',
-        StudentEmail: 'email2',
-        Active: true,
-      },
-    ];
-    setStudents(studentsList);
-  };
-
-  const onAddStudentFormSubmit = () => {
+    // const studentsList = [
+    //   {
+    //     id: 1,
+    //     StudentFirstName: 'firstName1',
+    //     StudentLastName: 'lastName1',
+    //     StudentDateOfBirth: 'birthDate1',
+    //     StudentCellPhone: 'phone1',
+    //     StudentEmail: 'email1',
+    //     Active: true,
+    //   },
+    //   {
+    //     id: 2,
+    //     StudentFirstName: 'firstName2',
+    //     StudentLastName: 'lastName2',
+    //     StudentDateOfBirth: 'birthDate2',
+    //     StudentCellPhone: 'phone2',
+    //     StudentEmail: 'email2',
+    //     Active: true,
+    //   },
+    // ];
+    const response = await getStudents();
     // eslint-disable-next-line no-console
-    console.log({ firstName, lastName, birthDate, cellPhone, emailAddress });
+    console.log(response);
+    setStudents(response);
+    setActiveStudents(response.filter((student) => student.Active === true));
   };
 
-  async function archiveStudentHandler() {
-    // const updatedStudent = {
-    //   id: studentId,
-    //   Active: false
-    // };
-    // await updateStudent(updatedStudent);
-    // refreshStudents();
-  }
+  const onAddStudentFormSubmit = async (
+    enteredFirstName,
+    enteredLastName,
+    enteredBirthDate,
+    enteredCellPhone,
+    enteredEmailAddress
+  ) => {
+    // eslint-disable-next-line no-console
+    console.log({
+      enteredFirstName,
+      enteredLastName,
+      enteredBirthDate,
+      enteredCellPhone,
+      enteredEmailAddress,
+    });
+    const newStudent = {
+      StudentFirstName: enteredFirstName,
+      StudentLastName: enteredLastName,
+      StudentDateOfBirth: enteredBirthDate,
+      StudentCellPhone: enteredCellPhone,
+      StudentEmail: enteredEmailAddress,
+    };
 
-  function openUpdateModal() {
-    // const studentIndex = studentsList.findIndex(student =>
-    //   student.id === studentId
-    // );
-    // setStudentToUpdate(studentsList[studentIndex]);
-    // setUpdateModal(true);
-  }
+    await addStudent(newStudent);
+
+    refreshStudents();
+  };
 
   return (
     <Container maxWidth="sm">
@@ -96,7 +108,7 @@ export default function Students() {
           alignItems: 'center',
         }}
       >
-        <StudentsList students={students} />
+        <StudentsList students={activeStudents} />
       </Box>
     </Container>
   );
