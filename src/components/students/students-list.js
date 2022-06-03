@@ -17,16 +17,16 @@ export default function StudentsList(props) {
           <Grid item xs={12} key={student.id}>
             <Typography component="body">{student.id}</Typography>
             <Typography component="body">
-              {student.StudentLastName}, {student.StudentFirstName}
+              {student.studentLastName}, {student.studentFirstName}
             </Typography>
             <Typography component="body">
-              Date of Birth: {student.StudentDateOfBirth.substring(0, 10)}
+              Date of Birth: {student.studentDateOfBirth}
             </Typography>
             <Typography component="body">
-              Email: {student.StudentEmail}
+              Email: {student.studentEmail}
             </Typography>
             <Typography component="body">
-              Phone Number: {student.StudentCellPhone}
+              Phone Number: {student.studentCellPhone}
             </Typography>
             <Button value={student.id}>Delete</Button>
             <Button value={student.id}>Update</Button>

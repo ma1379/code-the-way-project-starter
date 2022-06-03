@@ -23,6 +23,11 @@ export default function AddStudent(props) {
   const onSubmitDisabled =
     !firstName || !lastName || !birthDate || !cellPhone || !emailAddress;
 
+  const addStudentHandler = (event) => {
+    event.preventDefault();
+    onSubmit(firstName, lastName, birthDate, cellPhone, emailAddress);
+  };
+
   return (
     <Box sx={{ mt: 3 }}>
       <Grid container spacing={2}>
@@ -78,7 +83,7 @@ export default function AddStudent(props) {
         fullWidth
         sx={{ mt: 3, mb: 2 }}
         type="submit"
-        onClick={onSubmit}
+        onClick={addStudentHandler}
         variant="contained"
       >
         Add Student

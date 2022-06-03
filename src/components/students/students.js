@@ -44,7 +44,7 @@ export default function Students() {
     // eslint-disable-next-line no-console
     console.log(response);
     setStudents(response);
-    setActiveStudents(response.filter((student) => student.Active === true));
+    setActiveStudents(response.filter((student) => student.active === true));
   };
 
   const onAddStudentFormSubmit = async (
@@ -73,6 +73,11 @@ export default function Students() {
     await addStudent(newStudent);
 
     refreshStudents();
+    setFirstName('');
+    setLastName('');
+    setBirthDate('');
+    setCellPhone('');
+    setEmailAddress('');
   };
 
   return (
