@@ -61,8 +61,6 @@ export default function Students() {
       active: true,
     };
 
-    console.log(newStudent);
-
     await addStudent(newStudent);
     refreshStudents();
     setFirstName('');

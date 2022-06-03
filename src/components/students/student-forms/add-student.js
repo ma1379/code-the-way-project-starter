@@ -55,6 +55,7 @@ export default function AddStudent(props) {
             label="Date of Birth"
             onChange={(event) => onBirthDateChange(event.target.value)}
             required
+            type="date"
             value={birthDate}
           />
         </Grid>
