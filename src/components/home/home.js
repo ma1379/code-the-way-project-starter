@@ -20,6 +20,10 @@ export default function Home() {
     navigate(ROUTES.SIGN_UP);
   };
 
+  const onStudentListClick = () => {
+    navigate(ROUTES.STUDENTS);
+  };
+
   return (
     <Container maxWidth="sm">
       <Box
@@ -73,8 +77,12 @@ export default function Home() {
           <Button variant="contained" onClick={onDemoSignUpFormClick}>
             Demo Sign-Up Form
           </Button>
+
           <Button variant="outlined" onClick={onRepositoryClick}>
             Repository
+          </Button>
+          <Button variant="contained" onClick={onStudentListClick}>
+            Students List
           </Button>
         </Stack>
       </Box>
