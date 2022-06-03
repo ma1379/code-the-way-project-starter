@@ -41,8 +41,6 @@ export default function Students() {
     //   },
     // ];
     const response = await getStudents();
-    // eslint-disable-next-line no-console
-    console.log(response);
     setStudents(response);
     setActiveStudents(response.filter((student) => student.active === true));
   };
@@ -54,24 +52,18 @@ export default function Students() {
     enteredCellPhone,
     enteredEmailAddress
   ) => {
-    // eslint-disable-next-line no-console
-    console.log({
-      enteredFirstName,
-      enteredLastName,
-      enteredBirthDate,
-      enteredCellPhone,
-      enteredEmailAddress,
-    });
     const newStudent = {
-      StudentFirstName: enteredFirstName,
-      StudentLastName: enteredLastName,
-      StudentDateOfBirth: enteredBirthDate,
-      StudentCellPhone: enteredCellPhone,
-      StudentEmail: enteredEmailAddress,
+      studentFirstName: enteredFirstName,
+      studentLastName: enteredLastName,
+      studentDateOfBirth: enteredBirthDate,
+      studentCellPhone: enteredCellPhone,
+      studentEmail: enteredEmailAddress,
+      active: true,
     };
 
-    await addStudent(newStudent);
+    console.log(newStudent);
 
+    await addStudent(newStudent);
     refreshStudents();
     setFirstName('');
     setLastName('');
