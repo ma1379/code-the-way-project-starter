@@ -5,10 +5,14 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
 export default function StudentsList(props) {
-  const { students, archiveStudentHandler } = props;
+  const { students, archiveStudentHandler, updateStudentHandler } = props;
 
   const archiveStudent = (event) => {
     archiveStudentHandler(event.target.value);
+  };
+
+  const updateStudent = (event) => {
+    updateStudentHandler(event.target.value);
   };
 
   return (
@@ -30,7 +34,9 @@ export default function StudentsList(props) {
             <Button value={student.id} onClick={archiveStudent}>
               Delete
             </Button>
-            <Button value={student.id}>Update</Button>
+            <Button value={student.id} onClick={updateStudent}>
+              Update
+            </Button>
           </Grid>
         ))}
       </Grid>
@@ -41,4 +47,5 @@ export default function StudentsList(props) {
 StudentsList.propTypes = {
   students: PropTypes.array.isRequired,
   archiveStudentHandler: PropTypes.func.isRequired,
+  updateStudentHandler: PropTypes.func.isRequired,
 };

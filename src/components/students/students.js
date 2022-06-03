@@ -2,15 +2,19 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AddStudent from './student-forms/add-student';
 import StudentsList from './students-list';
+import UpdateStudent from './student-forms/update-student';
 import {
   getStudents,
   addStudent,
   updateStudent,
 } from '../../services/services';
+import ROUTES from '../../constants/routes';
 
 export default function Students() {
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [birthDate, setBirthDate] = useState('');
@@ -18,6 +22,8 @@ export default function Students() {
   const [emailAddress, setEmailAddress] = useState('');
   const [students, setStudents] = useState([]);
   const [activeStudents, setActiveStudents] = useState([]);
+  const [updateStudentModal, setUpdateStudentModal] = useState(false);
+  const [studentToUpdate, setStudentToUpdate] = useState('');
 
   useEffect(() => {
     refreshStudents();
@@ -63,8 +69,29 @@ export default function Students() {
     refreshStudents();
   };
 
+  const onUpdateStudent = (studentId) => {
+    if (updateStudentModal == true) {
+      setUpdateStudentModal(false);
+    } else {
+      const studentIndex = students.findIndex(
+        (student) => student.id === studentId
+      );
+      setStudentToUpdate(students[studentIndex]);
+      setUpdateStudentModal(true);
+    }
+  };
+
+  const updateStudentHandler = async (studentId) => {};
+
   return (
     <Container maxWidth="sm">
+      {updateStudentModal && (
+        <UpdateStudent
+          student={studentToUpdate}
+          onSubmit={updateStudentHandler}
+          handleClose={onUpdateStudent}
+        />
+      )}
       <Box
         sx={{
           display: 'flex',
@@ -99,6 +126,7 @@ export default function Students() {
         <StudentsList
           students={activeStudents}
           archiveStudentHandler={archiveStudentHandler}
+          updateStudentHandler={onUpdateStudent}
         />
       </Box>
     </Container>
