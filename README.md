@@ -9,6 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Table of Contents
 
+- [Quick Start](#quick-start)
+
 - [Getting Started](#getting-started)
 
   - [Prerequisites](#prerequisites)
@@ -19,6 +21,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [Running the Application Locally](#running-application-locally)
   - [ESLint and Prettier.io](#eslint-and-prettierio)
   - [Committing](#committing)
+
+- [Application Structure](#application-structure)
+
+  - [Components](#components)
+  - [Constants](#constants)
+  - [Services](#services)
+  - [Util](#util)
 
 - [Material UI](#material-ui)
 
@@ -32,6 +41,36 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Learn More](#learn-more)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
+
+<a name="quick-start"></a>
+
+## Quick Start
+
+The following are simple instructions to start developing in this application. For more detailed instructions, see [Getting Started](#getting-started).
+
+1. Clone this repository:
+
+```
+git clone https://github.com/joeyschroeder/code-the-way-project-starter.git
+```
+
+2. Navigate inside repository directory:
+
+```
+cd cd code-the-way-project-starter
+```
+
+3. Install dependencies:
+
+```
+npm install
+```
+
+4. After installation, start the application:
+
+```
+npm start
+```
 
 <a name="getting-started"></a>
 
@@ -225,6 +264,48 @@ npm run eslint
 ```
 
 It's recommended a developers run `npm run eslint:fix` often during development to prevent any failures from code-style or JavaScript syntactical errors.
+
+<a name="#application-structure"></a>
+
+## Application Structure
+
+Keeping your application code maintainable is important, especially as an application's code-base grows in size. The `src` folder of this application is separated into four folders to help that to help making meaningful separations between the types of code used in the application.
+
+Meaningful separations of code can also help prevent **dependency cycles** in JavaScript. They can also help other developers review your code. For example, if another developer is reviewing your work and sees a file change in a specific folder, they can reasonably assume what kind of change happened.
+
+<a name="#components"></a
+
+### Components `(./src/components)`
+
+The **components** folder is traditionally used exclusively for [React Components](https://reactjs.org/docs/react-component.html). Everything in this folder should be a React component. React components are exclusively used for the **user-interface (UI)** of the application. So, think of the components folder as a place for all of the UI of your application.
+
+<a name="#constants"></a
+
+### Constants `(./src/constants)`
+
+The **constants** folder is traditionally used for any variables that are _constant_ in your application, and used in multiple files.
+
+For example, you may have an email address used in multiple of places in your application. Instead of hard-coding that email address in multiple different files, you may want to create a _constant_ file called `email-address.js` with a JavaScript variable for that email address. Then you can import that email address throughout your entire application. This is advantageous because if that email address were to change, there's now only a single spot where you'd have to update your code.
+
+In short, if you have a value that is used in more than one spot in your application you should add it to this folder.
+
+<a name="#services"></a
+
+### Services `(./src/services)`
+
+The **services** folder is traditionally used for any JavaScript functions that make [asynchronous](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) requests to an API.
+
+It's more than likely that a **user-interface (UI)** will consume data from an API differently than how the API is structured. For example, on a home page, you may request user details from your API. You may want that same data on a user account page. Instead of duplicating that request function in both pages, you could simply add it to this services file then import it into both page UI components.
+
+<a name="#util"></a>
+
+### Util `(./src/util)`
+
+The **util** folder it traditionally used as a _catch-all_ for any re-useable JavaScript functions that are not [components](#components) or [services](#services).
+
+For example, you may have a custom sorting JavaScript function used for several different types of data. Instead of writing that custom function multiple times, you could simply create a _utility_. Then you could import that sorting function into those different spots. If that sorting logic were to ever change, you now only have to update it in a single place.
+
+This structure is only a starting point.  You may realize during development that your application could benefit from additional structure.  For example, you may find you're using a lot of images, files, or other non-JavaScript resources in your application.  So, you may want to add an additional folder for **assets** or **files**.
 
 <a name="#material-ui"></a>
 
