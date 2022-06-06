@@ -3,9 +3,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
-import { Modal } from '@mui/material';
+import { Dialog, DialogTitle } from '@mui/material';
 import { useState, useEffect } from 'react';
-import { style } from '@mui/system';
 
 export default function UpdateStudent(props) {
   const { student, onSubmit, handleClose } = props;
@@ -68,13 +67,9 @@ export default function UpdateStudent(props) {
   };
 
   return (
-    <Modal
-      open
-      onClose={handleClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <Box sx={style}>
+    <Dialog open onClose={handleClose}>
+      <DialogTitle>Update Student</DialogTitle>
+      <Box>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -128,7 +123,7 @@ export default function UpdateStudent(props) {
           Update Student
         </Button>
       </Box>
-    </Modal>
+    </Dialog>
   );
 }
 
