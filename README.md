@@ -265,7 +265,7 @@ npm run eslint
 
 It's recommended a developers run `npm run eslint:fix` often during development to prevent any failures from code-style or JavaScript syntactical errors.
 
-<a name="#application-structure"></a>
+<a name="application-structure"></a>
 
 ## Application Structure
 
@@ -273,13 +273,13 @@ Keeping your application code maintainable is important, especially as an applic
 
 Meaningful separations of code can also help prevent **dependency cycles** in JavaScript. They can also help other developers review your code. For example, if another developer is reviewing your work and sees a file change in a specific folder, they can reasonably assume what kind of change happened.
 
-<a name="#components"></a
+<a name="components"></a
 
 ### Components `(./src/components)`
 
 The **components** folder is traditionally used exclusively for [React Components](https://reactjs.org/docs/react-component.html). Everything in this folder should be a React component. React components are exclusively used for the **user-interface (UI)** of the application. So, think of the components folder as a place for all of the UI of your application.
 
-<a name="#constants"></a
+<a name="constants"></a
 
 ### Constants `(./src/constants)`
 
@@ -289,7 +289,7 @@ For example, you may have an email address used in multiple of places in your ap
 
 In short, if you have a value that is used in more than one spot in your application you should add it to this folder.
 
-<a name="#services"></a
+<a name="services"></a
 
 ### Services `(./src/services)`
 
@@ -297,7 +297,7 @@ The **services** folder is traditionally used for any JavaScript functions that 
 
 It's more than likely that a **user-interface (UI)** will consume data from an API differently than how the API is structured. For example, on a home page, you may request user details from your API. You may want that same data on a user account page. Instead of duplicating that request function in both pages, you could simply add it to this services file then import it into both page UI components.
 
-<a name="#util"></a>
+<a name="util"></a>
 
 ### Util `(./src/util)`
 
@@ -307,7 +307,7 @@ For example, you may have a custom sorting JavaScript function used for several 
 
 This structure is only a starting point.  You may realize during development that your application could benefit from additional structure.  For example, you may find you're using a lot of images, files, or other non-JavaScript resources in your application.  So, you may want to add an additional folder for **assets** or **files**.
 
-<a name="#material-ui"></a>
+<a name="material-ui"></a>
 
 ## Material UI
 
