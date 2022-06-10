@@ -273,13 +273,13 @@ Keeping your application code maintainable is important, especially as an applic
 
 Meaningful separations of code can also help prevent **dependency cycles** in JavaScript. They can also help other developers review your code. For example, if another developer is reviewing your work and sees a file change in a specific folder, they can reasonably assume what kind of change happened.
 
-<a name="components"></a
+<a name="components"></a>
 
 ### Components `(./src/components)`
 
 The **components** folder is traditionally used exclusively for [React Components](https://reactjs.org/docs/react-component.html). Everything in this folder should be a React component. React components are exclusively used for the **user-interface (UI)** of the application. So, think of the components folder as a place for all of the UI of your application.
 
-<a name="constants"></a
+<a name="constants"></a>
 
 ### Constants `(./src/constants)`
 
@@ -289,7 +289,7 @@ For example, you may have an email address used in multiple of places in your ap
 
 In short, if you have a value that is used in more than one spot in your application you should add it to this folder.
 
-<a name="services"></a
+<a name="services"></a>
 
 ### Services `(./src/services)`
 
