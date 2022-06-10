@@ -117,7 +117,21 @@ Finally, run `npm install` to install all project dependencies:
 npm install
 ```
 
-**NOTE:** _Occaisionally, depending on your user permissions, you may need to **force** npm to install dependencies. If errors occur while running `npm install`, you can do this by running `npm install --force` instead._
+**NOTE:** _Occasionally, depending on your user permissions, you may need to **force** npm to install dependencies. If errors occur while running `npm install`, you can do this by running `npm install --force` instead._
+
+**NOTE:** _Occasionally, you may see npm warnings about security vulnerabilities:_
+
+```
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+```
+
+For the most part, you do not have to worry about these warnings. You application
+will run fine without doing anything. These are warnings that other dependencies
+in your project may have security problems. Just make sure you're using the latest
+versions of dependencies.
+
+For more information, visit: [https://medium.com/codebrace/what-is-npm-audit-fix-bf1d7efefff7](https://medium.com/codebrace/what-is-npm-audit-fix-bf1d7efefff7).
 
 <a name="development"></a>
 
@@ -305,7 +319,7 @@ The **util** folder it traditionally used as a _catch-all_ for any re-useable Ja
 
 For example, you may have a custom sorting JavaScript function used for several different types of data. Instead of writing that custom function multiple times, you could simply create a _utility_. Then you could import that sorting function into those different spots. If that sorting logic were to ever change, you now only have to update it in a single place.
 
-This structure is only a starting point.  You may realize during development that your application could benefit from additional structure.  For example, you may find you're using a lot of images, files, or other non-JavaScript resources in your application.  So, you may want to add an additional folder for **assets** or **files**.
+This structure is only a starting point. You may realize during development that your application could benefit from additional structure. For example, you may find you're using a lot of images, files, or other non-JavaScript resources in your application. So, you may want to add an additional folder for **assets** or **files**.
 
 <a name="material-ui"></a>
 
