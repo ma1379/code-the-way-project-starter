@@ -1,11 +1,23 @@
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Link from '@mui/material/Link';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { Link } from '@mui/material';
 import ROUTES from '../../constants/routes';
+
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 export default function Home() {
   const navigate = useNavigate();
@@ -23,6 +35,9 @@ export default function Home() {
   const onStudentListClick = () => {
     navigate(ROUTES.STUDENTS);
   };
+
+
+
 
   return (
     <Container maxWidth="sm">
@@ -85,7 +100,24 @@ export default function Home() {
             Students List
           </Button>
         </Stack>
+        <div className="home">
+        <Grid container spacing={2}>
+          <Grid item xs={8} md={12}>
+            <Item>Brookfield Central Tennis</Item>
+          </Grid>
+          <Grid item xs={4} md={12}>
+            <Item>Surya Arvind</Item>
+          </Grid>
+          <Grid item xs={4} md={12}>
+            <Item>Jimmy Mirsberger</Item>
+          </Grid>
+          <Grid item xs={8} md={12}>
+            <Item>Sriram Arvind</Item>
+          </Grid>
+        </Grid>
+        </div>
       </Box>
+
     </Container>
   );
 }
