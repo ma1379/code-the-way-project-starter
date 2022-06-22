@@ -65,7 +65,7 @@ export default function Home() {
           >
             Milwaukee.
           </Link>
-          . It&apos;s 
+          . It&apos;s a great company and super legitimate too.
         </Typography>
         <Stack
           sx={{ pt: 4 }}
@@ -81,7 +81,7 @@ export default function Home() {
             Repository
           </Button>
           <Button variant="contained" onClick={onStudentListClick}>
-            Students List
+            Waste List
           </Button>
         </Stack>
       </Box>
