@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 import { Dialog, DialogTitle } from '@mui/material';
 import { useState, useEffect } from 'react';
 
-export default function UpdateStudent(props) {
-  const { student, onSubmit, handleClose } = props;
+export default function DeleteWastes(props) {
+  const { waste, onSubmit, handleClose } = props;
 
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [birthDate, setBirthDate] = useState('');
-  const [cellPhone, setCellPhone] = useState('');
-  const [emailAddress, setEmailAddress] = useState('');
+  const [name, setFirstName] = useState('');
+  const [owner, setLastName] = useState('');
+  const [price, setBirthDate] = useState('');
+  const [city, setCellPhone] = useState('');
+  const [state, setEmailAddress] = useState('');
 
   useEffect(() => {
     initializeForm();
