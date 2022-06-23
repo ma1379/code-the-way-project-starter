@@ -52,7 +52,7 @@ export default function Homepage() {
           We are have two on-site locations in {' '}
           <Link
             color="primary"
-            href="https://reactjs.org/docs/getting-started.html"
+            href="https://www.ci.brookfield.wi.us/"
             target="_blank"
           >
             Brookfield
@@ -60,7 +60,7 @@ export default function Homepage() {
           , and{' '}
           <Link
             color="primary"
-            href="https://mui.com/material-ui/getting-started"
+            href="https://city.milwaukee.gov/home"
             target="_blank"
           >
             Milwaukee.
