@@ -5,7 +5,7 @@ import ROUTES from '../../constants/routes';
 import SignUp from '../sign-up/sign-up';
 import App from '../app/app';
 import Homepage from '../waste/homepage';
-import Students from '../students/students';
+import Wastes from '../waste/wastes';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 
 const theme = createTheme();
@@ -19,7 +19,7 @@ export default function Root() {
             <Route path={ROUTES.HOMEPAGE} element={<Homepage />} />
             <Route path={ROUTES.SIGN_UP_SUCCESS} element={<SignUpSuccess />} />
             <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
-         {/* <Route path={ROUTES.WASTE} element={<Waste />} /> */}
+            <Route path={ROUTES.WASTES} element={<Wastes />} />
           </Route>
         </Routes>
       </BrowserRouter>

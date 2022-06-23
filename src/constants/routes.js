@@ -1,7 +1,7 @@
 const ROUTES = {
   HOMEPAGE: '/homepage',
   SIGN_UP: '/sign-up',
-  WASTE: '/waste',
+  WASTES: '/wastes',
   SIGN_UP_SUCCESS: '/sign-up-succes',
 };
 
