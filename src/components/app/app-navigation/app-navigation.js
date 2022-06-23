@@ -31,7 +31,7 @@ export default function AppNavigation(props) {
       </Toolbar>
       <Divider />
       <List>
-        <ListItemButton onClick={() => onListItemButtonClick(ROUTES.HOME)}>
+        <ListItemButton onClick={() => onListItemButtonClick(ROUTES.HOMEPAGE)}>
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
