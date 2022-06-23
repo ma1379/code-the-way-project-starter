@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import ROUTES from '../../constants/routes';
 
-export default function Home() {
+export default function Homepage() {
   const navigate = useNavigate();
 
   const onRepositoryClick = () => {
