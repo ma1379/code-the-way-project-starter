@@ -22,31 +22,156 @@ export default function UpdateWaste(props) {
   }, []);
 
   const initializeForm = () => {
-    if (waste.wasteName != null) {
-      setName(waste.wasteName);
+    if (waste.name != null) {
+      setName(waste.name);
     }
-    if (waste.wasteOwner != null) {
-      setOwner(waste.wasteOwner);
+    if (waste.owner != null) {
+      setOwner(waste.owner);
     }
-    if (waste.wastePrice != null) {
-      setPrice(waste.wastePrice);
+    if (waste.price != null) {
+      setPrice(waste.price);
     }
-    if (waste.wasteCity != null) {
-      setCity(waste.wasteCity);
+    if (waste.city != null) {
+      setCity(waste.city);
     }
-    if (waste.wasteState != null) {
-      setState(waste.wasteState);
+    if (waste.state != null) {
+      setState(waste.state);
     }
-    if (waste.wastePostalCode != null) {
-      setPostalCode(waste.wastePostalCode);
+    if (waste.postalCode != null) {
+      setPostalCode(waste.postalCode);
     }
-    if (waste.wasteDateAccepted != null) {
-      const dateAcc = waste.wasteDateAccepted.substring(0, 10);
+    if (waste.dateAccepted != null) {
+      const dateAcc = waste.dateAccepted.substring(0, 10);
       setDateAccepted(dateAcc);
     }
-    if (waste.wasteDateReturned != null) {
-      const dateRet = waste.wasteDateReturned.substring(0, 10);
+    if (waste.dateReturned != null) {
+      const dateRet = waste.dateReturned.substring(0, 10);
       setDateReturned(dateRet);
     }
   };
+  const updateWasteHandler = (event) => {
+    event.preventDefault();
+    onSubmit(
+      waste.id,
+      name,
+      owner,
+      price,
+      city,
+      state,
+      postalCode,
+      dateAccepted,
+      dateReturned
+    );
+  };
+  const nameChangeHandler = (event) => {
+    setName(event.target.value);
+  };
+  const ownerChangeHandler = (event) => {
+    setOwner(event.target.value);
+  };
+  const priceChangeHandler = (event) => {
+    setPrice(event.target.value);
+  };
+  const cityChangeHandler = (event) => {
+    setCity(event.target.value);
+  };
+  const stateChangeHandler = (event) => {
+    setState(event.target.value);
+  };
+  const postalCodeChangeHandler = (event) => {
+    setPostalCode(event.target.value);
+  };
+  const dateAcceptedChangeHandler = (event) => {
+    setDateAccepted(event.target.value);
+  };
+  const dateReturnedChangeHandler = (event) => {
+    setDateReturned(event.target.value);
+  };
+  return (
+    <Dialog open onClose={handleClose}>
+      <DialogTitle>Update Waste</DialogTitle>
+      <Box>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="Name"
+              onChange={nameChangeHandler}
+              value={name}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="Owner"
+              onChange={ownerChangeHandler}
+              value={owner}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Price"
+              onChange={priceChangeHandler}
+              value={price}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="City"
+              onChange={cityChangeHandler}
+              value={city}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="State"
+              onChange={stateChangeHandler}
+              value={state}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Postal Code"
+              onChange={postalCodeChangeHandler}
+              value={postalCode}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Date Accepted"
+              onChange={dateAcceptedChangeHandler}
+              value={dateAccepted}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Date Returned"
+              onChange={dateReturnedChangeHandler}
+              value={state}
+            />
+          </Grid>
+        </Grid>
+        <Button
+          fullWidth
+          sx={{ mt: 3, mb: 2 }}
+          type="submit"
+          onClick={updateWasteHandler}
+          variant="contained"
+        >
+          Update Waste
+        </Button>
+      </Box>
+    </Dialog>
+  );
 }
+UpdateWaste.propTypes = {
+  waste: PropTypes.object.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  handleClose: PropTypes.func.isRequired,
+};
