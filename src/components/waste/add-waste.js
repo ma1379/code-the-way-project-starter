@@ -22,6 +22,7 @@ export default function AddWaste(props) {
     onPostalCodeChange,
     onDateAcceptedChange,
     onDateReturnedChange,
+    onSubmit,
   } = props;
 
   const onSubmitDisabled =
@@ -36,7 +37,16 @@ export default function AddWaste(props) {
 
   const addWasteHandler = (event) => {
     event.preventDefault();
-    // onSubmit(name, owner, price, city, state, postalCode, dateAccepted, dateReturned);
+    onSubmit(
+      name,
+      owner,
+      price,
+      city,
+      state,
+      postalCode,
+      dateAccepted,
+      dateReturned
+    );
   };
 
   return (
@@ -148,4 +158,5 @@ AddWaste.propTypes = {
   onPostalCodeChange: PropTypes.func.isRequired,
   onDateAcceptedChange: PropTypes.func.isRequired,
   onDateReturnedChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
