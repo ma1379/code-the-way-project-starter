@@ -63,7 +63,7 @@ export default function Homepage() {
             href="https://city.milwaukee.gov/home"
             target="_blank"
           >
-            Milwaukee.
+            Milwaukee
           </Link>
           . It&apos;s a great company and super legitimate too.
         </Typography>
