@@ -25,11 +25,18 @@ export default function AddWaste(props) {
   } = props;
 
   const onSubmitDisabled =
-    !name || !owner || !price || !city || !state || !postalCode;
+    !name ||
+    !owner ||
+    !price ||
+    !city ||
+    !state ||
+    !postalCode ||
+    !dateAccepted ||
+    !dateReturned;
 
   const addWasteHandler = (event) => {
     event.preventDefault();
-    // onSubmit(name, owner, price, city, state);
+    // onSubmit(name, owner, price, city, state, postalCode, dateAccepted, dateReturned);
   };
 
   return (
@@ -38,7 +45,7 @@ export default function AddWaste(props) {
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            label="First Name"
+            label="Name"
             onChange={(event) => onNameChange(event.target.value)}
             required
             value={name}
@@ -47,7 +54,7 @@ export default function AddWaste(props) {
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            label="Last Name"
+            label="Owner"
             onChange={(event) => onOwnerChange(event.target.value)}
             required
             value={owner}
@@ -56,17 +63,16 @@ export default function AddWaste(props) {
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Date of Birth"
+            label="Price"
             onChange={(event) => onPriceChange(event.target.value)}
             required
-            type="date"
             value={price}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Cell Phone Number"
+            label="City"
             onChange={(event) => onCityChange(event.target.value)}
             required
             value={city}
@@ -75,40 +81,38 @@ export default function AddWaste(props) {
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Email Address"
+            label="State"
             onChange={(event) => onStateChange(event.target.value)}
             required
-            type="email"
             value={state}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Email Address"
+            label="Postal Code"
             onChange={(event) => onPostalCodeChange(event.target.value)}
             required
-            type="email"
             value={postalCode}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Email Address"
+            label="Date Accepted"
             onChange={(event) => onDateAcceptedChange(event.target.value)}
             required
-            type="email"
+            type="date"
             value={dateAccepted}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Email Address"
+            label="Date Returned"
             onChange={(event) => onDateReturnedChange(event.target.value)}
             required
-            type="email"
+            type="date"
             value={dateReturned}
           />
         </Grid>
