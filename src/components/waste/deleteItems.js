@@ -11,7 +11,7 @@ import {
   updateWaste,
 } from '../../services/services';
 
-export default function Students() {
+export default function Waste() {
   const [name, setName] = useState('');
   const [owner, setOwner] = useState('');
   const [price, setPrice] = useState('');
@@ -24,72 +24,77 @@ export default function Students() {
   }, []);
 
   const refreshStudents = async () => {
-    const response = await getStudents();
-    setStudents(response);
-    setActiveStudents(response.filter((student) => student.active === true));
+    const response = await getWaste();
+    setWaste(response);
+    setActiveWaste(response.filter((student) => student.active === true));
   };
 
   const onAddStudentFormSubmit = async (
-    enteredFirstName,
-    enteredLastName,
-    enteredBirthDate,
-    enteredCellPhone,
-    enteredEmailAddress
+    enteredName,
+    enteredOwner,
+    enteredPrice,
+    enteredCity,
+    enteredState,
+    enteredPostalCode
   ) => {
-    const newStudent = {
-      studentFirstName: enteredFirstName,
-      studentLastName: enteredLastName,
-      studentDateOfBirth: enteredBirthDate,
-      studentCellPhone: enteredCellPhone,
-      studentEmail: enteredEmailAddress,
+    const newWaste = {
+      wasteName: enteredName,
+      wasteOwner: enteredOwner,
+      wastePrice: enteredPrice,
+      wasteCity: enteredCity,
+      wasteState: enteredState,
+      wastePostalCode: enteredPostalCode,
       active: true,
     };
 
-    await addStudent(newStudent);
-    refreshStudents();
-    setFirstName('');
-    setLastName('');
-    setBirthDate('');
-    setCellPhone('');
-    setEmailAddress('');
+    await addWaste(newWaste);
+    refreshWaste();
+    setName('');
+    setOwner('');
+    setPrice('');
+    setCity('');
+    setState('');
+    setPostalCode('');
   };
 
-  const archiveStudentHandler = async (studentId) => {
-    const updatedStudent = {
-      id: studentId,
+  const archiveWasteHandler = async (wasteId) => {
+    const updatedWaste = {
+      id: wasteId,
       Active: false,
     };
-    await updateStudent(updatedStudent);
-    refreshStudents();
+    await updateWaste(updatedWaste);
+    refreshWaste();
   };
 
-  const updateModalChange = (studentId) => {
-    if (updateStudentModal === true) {
+  const updateModalChange = (wasteId) => {
+    if (updateWasteModal === true) {
       setUpdateStudentModal(false);
     } else {
-      const studentIndex = students.findIndex(
-        (student) => student.id === studentId
+      const wasteIndex = waste.findIndex(
+        (waste) => waste.id === wasteId
       );
-      setStudentToUpdate(students[studentIndex]);
-      setUpdateStudentModal(true);
+      setWasteToUpdate(waste[wasteIndex]);
+      setUpdateWasteModal(true);
     }
   };
 
-  const updateStudentHandler = async (
-    studentId,
-    newFirstName,
-    newLastName,
-    newBirthDate,
-    newCellPhone,
-    newEmailAddress
+  const updateWasteHandler = async (
+    wasteId,
+    newName,
+    newOwner,
+    newPrice,
+    newCity,
+    newState,
+    newPostalCode
   ) => {
     const updatedStudent = {
-      id: studentId,
-      studentFirstName: newFirstName,
-      studentLastName: newLastName,
-      studentDateOfBirth: newBirthDate,
-      studentCellPhone: newCellPhone,
-      studentEmail: newEmailAddress,
+      id: wasteId,
+      wasteName: newName,
+      wasteLastName: newOwner,
+      wasteBirth: newPrice,
+      studentCellPhone: newCity,
+      studentCellPhone: newState,
+      studentCellPhone: newPostalCode,
       active: true,
     };
     await updateStudent(updatedStudent);
