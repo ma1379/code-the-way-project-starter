@@ -98,6 +98,7 @@ export default function UpdateWaste(props) {
               label="Name"
               onChange={nameChangeHandler}
               value={name}
+              required
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -106,6 +107,7 @@ export default function UpdateWaste(props) {
               label="Owner"
               onChange={ownerChangeHandler}
               value={owner}
+              required
             />
           </Grid>
           <Grid item xs={12}>
@@ -114,6 +116,7 @@ export default function UpdateWaste(props) {
               label="Price"
               onChange={priceChangeHandler}
               value={price}
+              required
             />
           </Grid>
           <Grid item xs={12}>
@@ -122,6 +125,7 @@ export default function UpdateWaste(props) {
               label="City"
               onChange={cityChangeHandler}
               value={city}
+              required
             />
           </Grid>
           <Grid item xs={12}>
@@ -130,6 +134,7 @@ export default function UpdateWaste(props) {
               label="State"
               onChange={stateChangeHandler}
               value={state}
+              required
             />
           </Grid>
           <Grid item xs={12}>
@@ -138,6 +143,7 @@ export default function UpdateWaste(props) {
               label="Postal Code"
               onChange={postalCodeChangeHandler}
               value={postalCode}
+              required
             />
           </Grid>
           <Grid item xs={12}>
@@ -146,6 +152,7 @@ export default function UpdateWaste(props) {
               label="Date Accepted"
               onChange={dateAcceptedChangeHandler}
               value={dateAccepted}
+              required
             />
           </Grid>
           <Grid item xs={12}>
