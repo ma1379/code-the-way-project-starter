@@ -20,8 +20,8 @@ export default function Homepage() {
     navigate(ROUTES.SIGN_UP);
   };
 
-  const onStudentListClick = () => {
-    navigate(ROUTES.STUDENTS);
+  const onWasteListClick = () => {
+    navigate(ROUTES.WASTES);
   };
 
   return (
@@ -80,7 +80,7 @@ export default function Homepage() {
           <Button variant="outlined" onClick={onRepositoryClick}>
             Repository
           </Button>
-          <Button variant="contained" onClick={onStudentListClick}>
+          <Button variant="contained" onClick={onWasteListClick}>
             Waste List
           </Button>
         </Stack>

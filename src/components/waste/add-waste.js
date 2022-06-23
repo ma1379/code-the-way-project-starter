@@ -121,7 +121,7 @@ export default function AddWaste(props) {
             fullWidth
             label="Date Returned"
             onChange={(event) => onDateReturnedChange(event.target.value)}
-            required
+          
             type="date"
             value={dateReturned}
           />
