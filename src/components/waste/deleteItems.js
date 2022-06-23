@@ -9,11 +9,12 @@ import { useState, useEffect } from 'react';
 export default function DeleteWastes(props) {
   const { waste, onSubmit, handleClose } = props;
 
-  const [name, setFirstName] = useState('');
-  const [owner, setLastName] = useState('');
-  const [price, setBirthDate] = useState('');
-  const [city, setCellPhone] = useState('');
-  const [state, setEmailAddress] = useState('');
+  const [name, setName] = useState('');
+  const [owner, setOwner] = useState('');
+  const [price, setPrice] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [postalCode, setPostalCode] = useState('');
 
   useEffect(() => {
     initializeForm();
