@@ -4,8 +4,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ROUTES from '../../constants/routes';
 import SignUp from '../sign-up/sign-up';
 import App from '../app/app';
-import Homepage from '../waste/homepage';
-import Wastes from '../waste/wastes';
+import Homepage from '../wastes/homepage';
+import Wastes from '../wastes/wastes';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 
 const theme = createTheme();

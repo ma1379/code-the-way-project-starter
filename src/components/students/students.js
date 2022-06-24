@@ -95,7 +95,6 @@ export default function Students() {
       studentEmail: newEmailAddress,
       active: true,
     };
-    
     await updateStudent(updatedStudent);
     refreshStudents();
     updateModalChange();

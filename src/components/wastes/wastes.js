@@ -7,8 +7,8 @@ import { useState, useEffect } from 'react';
 import StudentsList from './students-list';;
 import UpdateStudent from './student-forms/update-student';  */
 
-/*  import AddWaste from './add-waste';   */
-import WastesList from './wastes-list';
+import AddWaste from './add-waste';
+import WasteList from './waste-list';
 import UpdateWaste from './update-waste';
 import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
@@ -55,17 +55,17 @@ export default function Wastes() {
             dateReturned: enteredDateReturned
         };
 
-        /* await addWaste(newWaste);
-         refreshWastes('');
-         setName('');
-         setOwner('');
-         setPrice('');
-         setCity('');
-         setState('');
-         setPostalCode('');
-         setDateAccepted('');
-         setDateReturned('');
-     */
+        await addWaste(newWaste);
+        refreshWastes('');
+        setName('');
+        setOwner('');
+        setPrice('');
+        setCity('');
+        setState('');
+        setPostalCode('');
+        setDateAccepted('');
+        setDateReturned('');
+
     };
 
     const updateModalChange = (wasteId) => {
@@ -125,7 +125,7 @@ export default function Wastes() {
                 <Typography component="h1" variant="h5">
                     Wastes
                 </Typography>
-                {/* <AddWaste
+                <AddWaste
                     name={name}
                     owner={owner}
                     price={price}
@@ -143,15 +143,15 @@ export default function Wastes() {
                     onDateAcceptedChange={setDateAccepted}
                     onDateReturnedChange={setDateReturned}
                     onSubmit={onAddWasteFormSubmit}
-            /> */}
+                />
             </Box>
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
             }}>
-                <WastesList
-                    wastes={wasteToUpdate}
+                <WasteList
+                    wastes={wastes}
                     updateWasteHandler={updateModalChange}
                 />
 

@@ -153,7 +153,7 @@ export default function UpdateWaste(props) {
               fullWidth
               label="Date Returned"
               onChange={dateReturnedChangeHandler}
-              value={state}
+              value={dateReturned}
             />
           </Grid>
         </Grid>
