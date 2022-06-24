@@ -37,9 +37,9 @@ export default function WasteList(props) {
                         <Typography component="p">Postal Code :  {waste.postalCode.substring(0, 5)}</Typography>
                         <Typography component="p"> Date Accepted : {waste.dateAccepted.substring(0, 10)}</Typography>
                         {dateReturnedCheckValid(waste)}   
-                        {/* <Button value={waste.id}>
-                            Return
-                        </Button> */}
+                        <Button value={waste.id} >
+                        Return
+                        </Button> 
                         <Button value={waste.id} onClick={updateWaste}>
                             Edit / Update
                         </Button>
