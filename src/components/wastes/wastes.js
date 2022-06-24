@@ -8,7 +8,7 @@ import StudentsList from './students-list';;
 import UpdateStudent from './student-forms/update-student';  */
 
 import AddWaste from './add-waste';
-import WastesList from './waste-list';
+// import WastesList from './waste-list';
 import UpdateWaste from './update-waste';
 import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
