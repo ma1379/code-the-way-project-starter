@@ -32,15 +32,15 @@ export default function GritSliderQuestions() {
     return (
 
     <Container fixed = "true" > 
+
     <Box components = "span" sx={{ 
         P: 5,
         width: 1000, height: 200,
-    }}> New ideas and projects sometimes distract me from previous ones. 
+    }}> 1.  New ideas and projects sometimes distract me from previous ones. 
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks} 
         valueLabelDisplay="off"
         
@@ -50,7 +50,7 @@ export default function GritSliderQuestions() {
     <Box components = "span" sx={{ 
         P: 5,
         width: 1000, height: 200,  
-    }}> Setbacks do NOT discourage me.
+    }}> 2. Setbacks do NOT discourage me.
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
@@ -65,7 +65,7 @@ export default function GritSliderQuestions() {
         P: 5,
         width: 1000, height: 200,
         
-    }}> I have been obsessed with a certian idea or project for a short time but later lost interest. 
+    }}> 3. I have been obsessed with a certian idea or project for a short time but later lost interest. 
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
@@ -80,7 +80,7 @@ export default function GritSliderQuestions() {
         P: 5,
         width: 1000, height: 200,
         
-    }}> I am a hard worker. 
+    }}> 4. I am a hard worker. 
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
@@ -95,7 +95,7 @@ export default function GritSliderQuestions() {
         P: 5,
         width: 1000, height: 200,
         
-    }}> I often set a goal but later  choose to pursue a different one. 
+    }}> 5. I often set a goal but later  choose to pursue a different one. 
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
@@ -110,7 +110,7 @@ export default function GritSliderQuestions() {
         P: 5,
         width: 1000, height: 200,
         
-    }}> I have difficulty maintaining focus on projects that take more than a few months to complete.
+    }}> 6. I have difficulty maintaining focus on projects that take more than a few months to complete.
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
@@ -125,7 +125,7 @@ export default function GritSliderQuestions() {
         P: 5,
         width: 1000, height: 200,
         
-    }}> I finish whatever I begin.
+    }}> 7. I finish whatever I begin.
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
@@ -140,7 +140,7 @@ export default function GritSliderQuestions() {
         P: 5,
         width: 1000, height: 200,
         
-    }}> I am diligent.
+    }}> 8. I am diligent.
       <Slider
         aria-label="Restricted values"
         defaultValue={50}
