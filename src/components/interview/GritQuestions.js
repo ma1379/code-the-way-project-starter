@@ -3,14 +3,15 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import Container from '@mui/material/Container';
 
+
 const marks = [
     {
-        value: 0,
-        label: 'Very Much Like Me',
+       value: 0,
+        label: 'Not Like Me At All',
     },
     {
         value: 25,
-        label: 'Mostly Like Me',
+        label: 'Not Much Like Me',
     },
     {
         value: 50,
@@ -18,11 +19,11 @@ const marks = [
     },
     {
         value: 75,
-        label: 'Not Much Like Me',
+        label: 'Mostly Like Me',
     },
     {
         value: 100,
-        label: 'Not Like Me At All',
+        label:  'Very Much Like Me',
     },
 ];
 
@@ -39,8 +40,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
-        marks={marks}
+         
+        marks={marks} 
+        valueLabelDisplay="off"
+        
       />
     </Box>
 
@@ -52,8 +55,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
 
@@ -66,8 +70,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
 
@@ -80,8 +85,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
 
@@ -94,8 +100,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
 
@@ -108,8 +115,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
 
@@ -122,8 +130,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
 
@@ -136,8 +145,9 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-        valueLabelDisplay="auto"
+         
         marks={marks}
+        valueLabelDisplay="off"
       />
     </Box>
     </Container> 
