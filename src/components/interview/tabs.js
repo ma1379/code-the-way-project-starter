@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InterviewQuestions from './InterviewQuestions';
+import GritSliderQuestions from './GritQuestions';
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/require-default-props */
 function TabPanel(props) {
@@ -60,7 +61,7 @@ export default function BasicTabs() {
       <InterviewQuestions />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Grit Questions will go here
+        <GritSliderQuestions />
       </TabPanel>
     </Box>
   );

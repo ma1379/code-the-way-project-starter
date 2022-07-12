@@ -74,9 +74,6 @@ export default function Home() {
           <Button variant="contained" onClick={() => navigate(ROUTES.TABS)}>
             Tabs
           </Button>
-          <Button variant = "contained" onClick={() => navigate(ROUTES.GRITQ)}>
-            Grit Questions
-          </Button>
         </Stack>
       </Box>
     </Container>
