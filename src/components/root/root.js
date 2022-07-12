@@ -6,7 +6,6 @@ import SignUp from '../sign-up/sign-up';
 import App from '../app/app';
 import Home from '../home/home';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
-import InterviewQuestions from '../interview/InterviewQuestions';
 import BasicTabs from '../interview/tabs';
 
 const theme = createTheme();
