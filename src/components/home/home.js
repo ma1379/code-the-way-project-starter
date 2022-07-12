@@ -70,15 +70,12 @@ export default function Home() {
           </Button>
           <Button variant="outlined" onClick={onRepositoryClick}>
             Repository
-            </Button>
-          <Button variant="contained" onClick={() => navigate(ROUTES.TABS)}>
-            Tabs
           </Button>
           <Button
             variant="contained"
             onClick={() => navigate(ROUTES.HeaderandFooter)}
           >
-            HeaderandFooter
+            Interview
           </Button>
         </Stack>
       </Box>

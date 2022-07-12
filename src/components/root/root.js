@@ -7,7 +7,7 @@ import App from '../app/app';
 import Home from '../home/home';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 import BasicTabs from '../interview/tabs';
-import HeaderandFooter from '../Interview/HeaderandFooter';
+import HeaderandFooter from '../interview/HeaderandFooter';
 
 const theme = createTheme();
 
@@ -16,7 +16,7 @@ export default function Root() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<App />}>
+          <Route path="/" element={<App />}>
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.SIGN_UP_SUCCESS} element={<SignUpSuccess />} />
             <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
