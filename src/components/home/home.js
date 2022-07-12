@@ -74,6 +74,12 @@ export default function Home() {
           <Button variant="contained" onClick={() => navigate(ROUTES.TABS)}>
             Tabs
           </Button>
+          <Button
+            variant="contained"
+            onClick={() => navigate(ROUTES.HeaderandFooter)}
+          >
+            HeaderandFooter
+          </Button>
         </Stack>
       </Box>
     </Container>
