@@ -4,7 +4,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import InterviewQuestions from './InterviewQuestions';
 import GritSliderQuestions from './GritQuestions';
 /* eslint-disable react/jsx-props-no-spreading */
@@ -50,7 +49,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '95%', height: 500, border: 5, mx: 'auto' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange}>
           <Tab label="Interview Questions" {...a11yProps(0)} />
@@ -58,10 +57,14 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      <InterviewQuestions />
+        <Box sx={{ height: 400, border: 5, overflow: 'auto', mx: '5%' }}>
+          <InterviewQuestions />
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <GritSliderQuestions />
+        <Box sx={{ height: 400, border: 5, overflow: 'auto', mx: '5%' }}>
+          <GritSliderQuestions />
+        </Box>
       </TabPanel>
     </Box>
   );
