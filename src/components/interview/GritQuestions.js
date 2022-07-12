@@ -43,6 +43,8 @@ export default function GritSliderQuestions() {
         step={null}
         marks={marks} 
         valueLabelDisplay="off"
+        track={false}
+
         
       />
     </Box>
@@ -55,9 +57,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
 
@@ -70,9 +73,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
 
@@ -85,9 +89,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
 
@@ -100,9 +105,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
 
@@ -115,9 +121,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
 
@@ -130,9 +137,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
 
@@ -145,9 +153,10 @@ export default function GritSliderQuestions() {
         aria-label="Restricted values"
         defaultValue={50}
         step={null}
-         
         marks={marks}
         valueLabelDisplay="off"
+        track={false}
+
       />
     </Box>
     </Container> 
