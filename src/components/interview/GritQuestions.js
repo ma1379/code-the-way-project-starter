@@ -34,8 +34,8 @@ export default function GritSliderQuestions() {
     <Container fixed = "true" > 
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
     }}> 1.  New ideas and projects sometimes distract me from previous ones. 
       <Slider
         aria-label="Restricted values"
@@ -44,14 +44,12 @@ export default function GritSliderQuestions() {
         marks={marks} 
         valueLabelDisplay="off"
         track={false}
-
-        
       />
     </Box>
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,  
+        mx: '50%',
+        width: '600%', height: 200,  
     }}> 2. Setbacks do NOT discourage me.
       <Slider
         aria-label="Restricted values"
@@ -65,8 +63,8 @@ export default function GritSliderQuestions() {
     </Box>
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
         
     }}> 3. I have been obsessed with a certian idea or project for a short time but later lost interest. 
       <Slider
@@ -81,8 +79,8 @@ export default function GritSliderQuestions() {
     </Box>
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
         
     }}> 4. I am a hard worker. 
       <Slider
@@ -97,8 +95,8 @@ export default function GritSliderQuestions() {
     </Box>
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
         
     }}> 5. I often set a goal but later  choose to pursue a different one. 
       <Slider
@@ -113,8 +111,8 @@ export default function GritSliderQuestions() {
     </Box>
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
         
     }}> 6. I have difficulty maintaining focus on projects that take more than a few months to complete.
       <Slider
@@ -129,8 +127,8 @@ export default function GritSliderQuestions() {
     </Box>
 
     <Box components = "span" sx={{ 
-        p: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
         
     }}> 7. I finish whatever I begin.
       <Slider
@@ -145,8 +143,8 @@ export default function GritSliderQuestions() {
     </Box>
 
     <Box components = "span" sx={{ 
-        P: 5,
-        width: 1100, height: 200,
+        mx: '50%',
+        width: '600%', height: 200,
         
     }}> 8. I am diligent.
       <Slider
