@@ -71,9 +71,6 @@ export default function Home() {
           <Button variant="outlined" onClick={onRepositoryClick}>
             Repository
             </Button>
-            <Button variant = "contained" onClick={() => navigate(ROUTES.InterviewQuestions)}>
-            Interview Questions
-          </Button>
           <Button variant="contained" onClick={() => navigate(ROUTES.TABS)}>
             Tabs
           </Button>

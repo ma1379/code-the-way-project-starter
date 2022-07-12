@@ -11,11 +11,6 @@ import FormLabel from '@mui/material/FormLabel';
 
 
 export default function InterviewQuestions() {
-    const [value, setValue] = React.useState('Controlled');
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value);
-    };
     return (
         <Container>
             <Box components='span' sx={{

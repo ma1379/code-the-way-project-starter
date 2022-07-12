@@ -7,7 +7,7 @@ import App from '../app/app';
 import Home from '../home/home';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 import InterviewQuestions from '../interview/InterviewQuestions';
-import BasicTabs from '../Interviews/tabs';
+import BasicTabs from '../interview/tabs';
 
 const theme = createTheme();
 
@@ -19,7 +19,6 @@ export default function Root() {
           <Route path='/' element={<App />}>
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.SIGN_UP_SUCCESS} element={<SignUpSuccess />} />
-            <Route path={ROUTES.InterviewQuestions} element={<InterviewQuestions />} />
             <Route path={ROUTES.TABS} element={<BasicTabs />} />
           </Route>
         </Routes>
