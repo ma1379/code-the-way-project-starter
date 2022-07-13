@@ -16,14 +16,17 @@ export default function HeaderandFooter() {
     <div>
       <h1 align="center">Student Names Interview</h1>
       <BasicTabs />
-      <Stack spacing={10} direction="row" justifyContent="center">
-        <Button variant="contained" onClick={saveResponses}>
-          Save
-        </Button>
-        <Button variant="contained" onClick={goBack}>
+      
+      <Stack spacing={85} direction="row" sx={{
+       p : 2,
+      }}> 
+      <Button variant="contained" onClick={goBack}>
           Back
-        </Button>
-      </Stack>
+        </Button> 
+        <Button variant="contained"  onClick={saveResponses} >
+          Save
+      </Button> 
+      </Stack> 
     </div>
   );
 }
