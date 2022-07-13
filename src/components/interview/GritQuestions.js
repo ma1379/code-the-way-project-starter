@@ -41,7 +41,7 @@ export default function GritSliderQuestions() {
         {' '}
         1. New ideas and projects sometimes distract me from previous ones.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -62,7 +62,7 @@ export default function GritSliderQuestions() {
         {' '}
         2. Setbacks do NOT discourage me.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -74,7 +74,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          px: 10, py: 7,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -83,7 +84,7 @@ export default function GritSliderQuestions() {
         3. I have been obsessed with a certian idea or project for a short time
         but later lost interest.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -95,7 +96,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          px: 10, py: 7,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -103,7 +105,7 @@ export default function GritSliderQuestions() {
         {' '}
         4. I am a hard worker.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -115,7 +117,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          px: 10, py: 7,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -123,7 +126,7 @@ export default function GritSliderQuestions() {
         {' '}
         5. I often set a goal but later choose to pursue a different one.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -135,7 +138,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          px: 10, py: 7,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -144,7 +148,7 @@ export default function GritSliderQuestions() {
         6. I have difficulty maintaining focus on projects that take more than a
         few months to complete.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -156,7 +160,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          px: 10, py: 7,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -164,7 +169,7 @@ export default function GritSliderQuestions() {
         {' '}
         7. I finish whatever I begin.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
@@ -176,7 +181,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          px: 10, py: 7,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -184,7 +190,7 @@ export default function GritSliderQuestions() {
         {' '}
         8. I am diligent.
         <Slider
-          aria-label="Restricted values"
+          // aria-label="Restricted values"
           defaultValue={50}
           step={null}
           marks={marks}
