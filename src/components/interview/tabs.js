@@ -49,7 +49,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '95%', height: 500, border: 3, mx: 'auto', borderColor: '#004cbb'  }}>
+    <Box sx={{ width: '95%', height: 500, border: 3, mx: 'auto', borderColor: 'rgba(0, 76, 187, 0)'  }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange}>
           <Tab label="Interview Questions" {...a11yProps(0)} />
@@ -57,12 +57,12 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Box sx={{ height: 400, border: 3, overflow: 'auto', mx: '5%',  borderColor: '#004cbb'}}>
+        <Box sx={{ height: 400, border: 3, overflow: 'auto', mx: '5%',  borderColor: 'rgba(0, 76, 187, 0)'}}>
           <InterviewQuestions />
         </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Box sx={{ height: 400, border: 3, overflow: 'auto', mx: '5%', borderColor: '#004cbb' }}>
+        <Box sx={{ height: 400, border: 3, overflow: 'auto', mx: '5%', borderColor: 'rgba(0, 76, 187, 0)' }}>
           <GritSliderQuestions />
         </Box>
       </TabPanel>
