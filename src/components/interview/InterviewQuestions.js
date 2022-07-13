@@ -15,7 +15,7 @@ export default function InterviewQuestions() {
         <Container>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}> 1. On your application, you stated that you would like to be a ______________, why did you choose this career?
                 <TextField
@@ -29,7 +29,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}> 2. Describe your personal strengths? Why do you describe those as strengths?
                 <TextField
@@ -37,12 +37,12 @@ export default function InterviewQuestions() {
                     label=""
                     multiline
                     fullWidth
-                    maxRows={4}
+                   maxRows={4}
                     variant="filled"
                 />            </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}> 3. Of the following words - Commitment, Leadership, and Achievement; which is most important? Why is it important to you?
                 <TextField
@@ -55,7 +55,7 @@ export default function InterviewQuestions() {
                 />            </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}> 4. Describe a difficult situation/project and how you overcame it?
                 <TextField
@@ -67,8 +67,8 @@ export default function InterviewQuestions() {
                     variant="filled"
                 />            </Box>
             <Box components='span' sx={{
-                p: 2,
-                width: 700,
+                p : 2, 
+                width: '100%',
                 height: 200,
             }}> 5. What other extra-curricular activities, employment opportunities or other programs are you currently involved in or will you become involved in this year?
                 <TextField
@@ -79,11 +79,11 @@ export default function InterviewQuestions() {
                     maxRows={4}
                     variant="filled"
                 />            </Box>
-            <Divider>In the remaining questions, check only one answer</Divider>
+            <Divider sx={{ pb: 8, }}>In the remaining questions, check only one answer</Divider>
 
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}> <FormControl>
                     <FormLabel id='demo-radio-buttons-group-label'> 6. Are you willing to sacrifice some things you usually do after school to prepare for a very fulfilling career that you were designed to do?</FormLabel>
@@ -98,7 +98,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -114,7 +114,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -130,7 +130,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -145,7 +145,7 @@ export default function InterviewQuestions() {
                 </FormControl>
             </Box><Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -161,7 +161,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -177,7 +177,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -193,7 +193,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}>
                 <FormControl>
@@ -209,7 +209,7 @@ export default function InterviewQuestions() {
             </Box>
             <Box components='span' sx={{
                 p: 2,
-                width: 700,
+                width: '100%',
                 height: 200,
             }}> <FormControl>
                     <FormLabel id='demo-radio-buttons-group-label'> It’s important that you understand what you are committing to. We are looking for you to participate in weekly class sessions, bi-monthly Etiquette Boot Camps on a Saturday and a summer internship experience.  How confident are you that you can completely commit to the activities of this program?</FormLabel>

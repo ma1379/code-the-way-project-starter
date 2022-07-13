@@ -32,7 +32,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -52,7 +53,8 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10,
+          py: 7,
           width: 1100,
           height: 200,
         }}
@@ -72,7 +74,7 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10, py: 7,
           width: 1100,
           height: 200,
         }}
@@ -93,7 +95,7 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10, py: 7,
           width: 1100,
           height: 200,
         }}
@@ -113,7 +115,7 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10, py: 7,
           width: 1100,
           height: 200,
         }}
@@ -133,7 +135,7 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10, py: 7,
           width: 1100,
           height: 200,
         }}
@@ -154,7 +156,7 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          p: 5,
+          px: 10, py: 7,
           width: 1100,
           height: 200,
         }}
@@ -174,7 +176,7 @@ export default function GritSliderQuestions() {
       <Box
         components="span"
         sx={{
-          P: 5,
+          px: 10, py: 7,
           width: 1100,
           height: 200,
         }}
