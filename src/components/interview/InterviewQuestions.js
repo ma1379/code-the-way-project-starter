@@ -16,8 +16,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1300,
-          height: 200,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -35,8 +35,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1300,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         {' '}
@@ -55,8 +55,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1300,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         {' '}
@@ -74,8 +74,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1300,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         {' '}
@@ -92,8 +92,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1300,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         {' '}
@@ -113,8 +113,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         {' '}
@@ -138,8 +138,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -161,8 +161,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -184,8 +184,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -207,8 +207,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -230,8 +230,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -253,8 +253,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -276,8 +276,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         <FormControl>
@@ -299,8 +299,8 @@ export default function InterviewQuestions() {
         components="span"
         sx={{
           p: 2,
-          width: 1200,
-          height: 200,
+          width: '100%',
+          height: '100%',
         }}
       >
         {' '}

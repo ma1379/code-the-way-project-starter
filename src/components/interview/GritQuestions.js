@@ -33,9 +33,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -54,9 +54,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -75,9 +75,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -97,9 +97,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -118,9 +118,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -139,9 +139,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -161,9 +161,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
@@ -182,9 +182,9 @@ export default function GritSliderQuestions() {
         components="span"
         sx={{
           px: 10,
-          py: 7,
-          width: 1100,
-          height: 200,
+          py: 5,
+          width: '100%',
+          height: '5%',
         }}
       >
         {' '}
