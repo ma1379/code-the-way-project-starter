@@ -23,7 +23,7 @@ export default function HeaderandFooter() {
 
       <BasicTabs />
       <Stack
-        spacing={85}
+        spacing={75}
         direction="row"
         sx={{
           p: 2,
@@ -32,7 +32,7 @@ export default function HeaderandFooter() {
         <Button variant="outlined" onClick={goBack}>
           Back To Home
         </Button>
-        <Button variant="contained" onClick={saveResponses}>
+        <Button variant="contained"  onClick={saveResponses}>
           Save
         </Button>
       </Stack>
